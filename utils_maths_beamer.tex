@@ -1,0 +1,131 @@
+%-------------------------------------------------------------------------------
+%          -Packages nécessaires pour écrire en Français et en UTF8-
+%-------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%                          -Outils de mise en forme-
+%-------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{pdfstartview=XYZ}
+\usepackage{enumerate}
+\usepackage{graphicx}
+%\usepackage{multicol}
+%\usepackage{tabularx}
+
+%\usepackage{anysize} %%pour pouvoir mettre les marges qu'on veut
+%\marginsize{2.5cm}{2.5cm}{2.5cm}{2.5cm}
+
+\usepackage{indentfirst} %%pour que les premier paragraphes soient aussi indentés
+\usepackage{verbatim}
+%\usepackage[table]{xcolor}  
+%\usepackage{multirow}
+\usepackage{ulem}
+%-------------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------------
+%                  -Nécessaires pour écrire des mathématiques-
+%-------------------------------------------------------------------------------
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{xlop}
+\usepackage[output-decimal-marker={,}]{siunitx}
+%-------------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------------
+%                    - Mise en forme 
+%-------------------------------------------------------------------------------
+
+\newcommand{\bu}[1]{\underline{\textbf{#1}}}
+
+
+\usepackage{ifthen}
+
+
+\newcommand{\ifTrue}[2]{\ifthenelse{\equal{#1}{true}}{#2}{$\qquad \qquad$}}
+
+\newcommand{\kword}[1]{\textcolor{red}{\underline{#1}}}
+
+
+%-------------------------------------------------------------------------------
+
+
+
+%-------------------------------------------------------------------------------
+%                    - Racourcis d'écriture -
+%-------------------------------------------------------------------------------
+
+% Angles orientés (couples de vecteurs)
+\newcommand{\aopp}[2]{(\vec{#1}, \vec{#2})} %Les deuc vecteurs sont positifs
+\newcommand{\aopn}[2]{(\vec{#1}, -\vec{#2})} %Le second vecteur est négatif
+\newcommand{\aonp}[2]{(-\vec{#1}, \vec{#2})} %Le premier vecteur est négatif
+\newcommand{\aonn}[2]{(-\vec{#1}, -\vec{#2})} %Les deux vecteurs sont négatifs
+
+%Ensembles mathématiques
+\newcommand{\naturels}{\mathbb{N}} %Nombres naturels
+\newcommand{\relatifs}{\mathbb{Z}} %Nombres relatifs
+\newcommand{\rationnels}{\mathbb{Q}} %Nombres rationnels
+\newcommand{\reels}{\mathbb{R}} %Nombres réels
+\newcommand{\complexes}{\mathbb{C}} %Nombres complexes
+
+
+%Intégration des parenthèses aux cosinus
+\newcommand{\cosP}[1]{\cos\left(#1\right)}
+\newcommand{\sinP}[1]{\sin\left(#1\right)}
+
+%Fractions
+\newcommand{\myfrac}[2]{{\LARGE $\frac{#1}{#2}$}}
+
+%Vocabulaire courrant
+\newcommand{\cad}{c'est-à-dire}
+
+%Droites
+\newcommand{\dte}[1]{$(#1)$}
+\newcommand{\fig}[1]{figure $#1$}
+\newcommand{\sym}{symétrique}
+\newcommand{\syms}{symétriques}
+\newcommand{\asym}{axe de symétrie}
+\newcommand{\asyms}{axes de symétrie}
+\newcommand{\seg}[1]{$[#1]$}
+\newcommand{\monAngle}[1]{$\widehat{#1}$}
+\newcommand{\bissec}{bissectrice}
+\newcommand{\mediat}{médiatrice}
+\newcommand{\ddte}[1]{$[#1)$}
+
+%Figures
+\newcommand{\para}{parallélogramme}
+\newcommand{\paras}{parallélogrammes}
+\newcommand{\myquad}{quadrilatère}
+\newcommand{\myquads}{quadrilatères}
+\newcommand{\co}{côtés opposés}
+\newcommand{\diag}{diagonale}
+\newcommand{\diags}{diagonales}
+\newcommand{\supp}{supplémentaires}
+\newcommand{\car}{carré}
+\newcommand{\cars}{carrés}
+\newcommand{\rect}{rectangle}
+\newcommand{\rects}{rectangles}
+\newcommand{\los}{losange}
+\newcommand{\loss}{losanges}
+
+
+\newcommand{\homo}{homothétie}
+\newcommand{\homos}{homothéties}
+
+
+
+
+%----------------------------------------------------
+% Environnements de cours
+%------------------------------------------------------

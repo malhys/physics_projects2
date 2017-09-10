@@ -1,0 +1,274 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moncours}
+\usepackage{ulem}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{pas-cours}
+
+\usepackage{tikz,tkz-tab}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\usepackage{fancyhdr}
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\
+
+
+%-------------------------------------------------------------------------------
+%                    - Mise en forme globale -
+%-------------------------------------------------------------------------------
+
+
+\makeatletter
+\renewcommand\@maketitle{%
+  \newpage
+  \null
+  \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {% set colour and font for the title 
+    \color{Red}\bfseries\LARGE
+    \@title \par}%
+    \vskip 1em%
+%    {% set colour and font for the author
+%      \color{CornflowerBlue}\sffamily\large
+%      \lineskip .5em%
+%      \begin{tabular}[t]{c}%
+%        \@author
+%      \end{tabular}\par}%
+%    \vskip 1em%
+%    {% set colour and font for the date
+%    \color{CornflowerBlue}\sffamily\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1.5em}
+
+\renewcommand\section{%
+\@startsection{section}{1}{\z@}%
+              {-3.5ex \@plus -1ex \@minus -.2ex}%
+              {2.3ex \@plus.2ex}%
+              {\color{Red}\Large\bfseries\underline}}
+            
+\renewcommand{\thesection}{\Roman{section}. }            
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname \hspace{0.2cm}}
+
+            
+\renewcommand\subsection{%
+\@startsection{subsection}{2}{\z@}%
+              {-3.25ex\@plus -1ex \@minus -.2ex}%
+              {1.5ex \@plus .2ex}%
+              {\color{Green}\large\bfseries\underline}}
+
+\renewcommand{\thesubsection}{\arabic{subsection}) }            
+\makeatother
+
+
+
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%                    - Elements de cours -
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+%Reprise des environnements définis dans le package pas-maths et personalisation
+
+
+\newcommand{\KW}[1]{\textbf{\uline{#1}}}
+
+%% Mot clé à mettre en évidence
+\newcommand{\kw}[1]{\definmot{#1}}
+
+%% "Casser" la boite
+\newcommand{\mysp}{\breakbox} 
+
+%------------------------------------------------------
+% Définitions
+
+% Singulier
+\newenvironment{mydef}{	
+	\begin{pasbox}[style=defi ,degrade, color=Red]	
+	}{
+\end{pasbox}
+}
+
+% Pluriel
+\newenvironment{mydefs}{
+	
+	\begin{pasbox}[style=defi ,degrade, pluriel, color=Red]	
+	}{
+\end{pasbox}
+}
+
+
+%------------------------------------------------------
+% Propriétés
+
+% Singulier
+\newenvironment{myprop}{	
+	\begin{pasbox}[style=prop ,degrade, color=Maroon]	
+	}{
+\end{pasbox}
+}
+
+% Pluriel
+\newenvironment{myprops}{
+	
+	\begin{pasbox}[style=prop ,degrade, pluriel, color=Maroon]	
+	}{
+\end{pasbox}
+}
+
+
+%------------------------------------------------------
+% Exemples
+\newenvironment{myex}{
+	\begin{pasbox}[style=ex ,degrade, color=ForestGreen]
+	}{
+\end{pasbox}
+}
+%
+
+\newenvironment{myexs}{
+	\begin{pasbox}[style=ex ,degrade, color=ForestGreen, pluriel]
+	}{
+\end{pasbox}
+}
+
+%------------------------------------------------------
+% Remarques
+\newenvironment{myrem}{
+	\begin{pasbox}[style=rem ,degrade, color=MidnightBlue]
+	}{
+\end{pasbox}
+}
+
+\newenvironment{myrems}{
+	\begin{pasbox}[style=rem ,degrade, color=Gray, pluriel]
+	}{
+\end{pasbox}
+}
+
+
+%------------------------------------------------------
+% Rappels
+\newenvironment{myrap}{
+	\begin{pasbox}[title=Rappel, style=rem ,degrade, color=Blue]
+	}{
+\end{pasbox}
+}
+
+\newenvironment{myraps}{
+	\begin{pasbox}[title=Rappels, style=rem ,degrade, color=Blue]
+	}{
+\end{pasbox}
+}
+
+%------------------------------------------------------
+% Méthode
+\newenvironment{mymeth}{
+	\begin{pasbox}[style=meth ,degrade]
+	}{
+\end{pasbox}
+}
+
+
+\newenvironment{mymethname}[1]{
+	\begin{pasbox}[style=meth ,degrade, name=#1]
+	}{
+\end{pasbox}
+}
+
+%------------------------------------------------------
+% 
+\newenvironment{mybox}{
+	\begin{pasbox}[style=prop ,degrade, notitle, color=NavyBlue]
+}{
+	\end{pasbox}
+}
+
+%------------------------------------------------------
+% 
+
+\newenvironment{mywarning}{
+	\begin{attention}[0.7]
+}{
+	\end{attention}
+}
+
+%------------------------------------------------------
+% Illustartion
+\newenvironment{myillus}{
+	\begin{pasbox}[title=Illustration, style=rem ,degrade, color=NavyBlue]
+	}{
+	\end{pasbox}
+}
+
+%------------------------------------------------------
+% Application
+\newenvironment{myapp}{
+	\begin{pasbox}[title=Application, style=rem ,degrade, color=NavyBlue]
+	}{
+\end{pasbox}
+}
+
+%------------------------------------------------------
+% Rappels
+
+
+\newenvironment{myobj}{
+	\begin{pasbox}[title=Objectifs, style=rem ,degrade, color=Blue]
+	}{
+\end{pasbox}
+}
+
+%------------------------------------------------------
+\newenvironment{myact}[1]{
+	\begin{pasbox}[title=Activite #1, style=rem ,degrade, color=WildStrawberry]
+	}{
+\end{pasbox}
+}
+
+%------------------------------------------------------
+\newenvironment{myrep}{
+	\begin{pasbox}[title=R\'eponse, style=rem ,degrade, color=SeaGreen]
+	}{
+\end{pasbox}
+}
+
+%-----------------------------------------
+% Exercices
+%-----------------------------------------
+\newenvironment{myexos}{
+	\begin{pasbox}[title=Exercices, style=rem ,degrade, color=ForestGreen, pluriel]
+	}{
+\end{pasbox}
+}
+
+
+
+\newenvironment{mybilan}{	
+	\begin{pasbox}[title=\'A retenir, style=defi ,degrade, color=Red]	
+	}{
+\end{pasbox}
+}
+
+\newenvironment{mybilan2}[1]{	
+	\begin{pasbox}[title=\'A retenir : #1, style=defi ,degrade, color=Red]	
+	}{
+\end{pasbox}
+}
+%-------------------------------------------------------
+% Organigrammes
+%-------------------------------------------------------
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, text width=3cm, draw=black, fill=orange!30]
+
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\endinput

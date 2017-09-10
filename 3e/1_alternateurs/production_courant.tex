@@ -1,0 +1,180 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+%\usepackage{../../pas-math}
+\usepackage{../../moncours}
+
+
+
+\input{../../utils_maths}
+
+\graphicspath{{./img/}}
+
+
+\date{}
+\title{}
+
+
+\begin{document}
+	
+	
+\chap[num=1, color=blue]{Production de courant électrique}{Olivier FINOT, \today }	
+
+\section{Production d'une tension variable}
+
+\input{act1}
+
+\input{bilan1}
+
+
+
+
+\begin{myexos}
+	\begin{itemize}
+		\item \exo{6}{176}
+		\item \exo{16}{178}
+	\end{itemize}
+\end{myexos}
+
+\section{L'alternateur de bicyclette}
+
+\input{act2}
+
+\input{bilan2}
+
+\begin{myexos}
+	\begin{multicols}{2}
+	
+		\begin{itemize}
+			\item \exo{7}{176}
+			\item \exo{9}{176}
+			\item \exo{12}{177}			
+		\end{itemize}
+	
+	\end{multicols}
+\end{myexos}
+
+
+\section{Centrale hydraulique et centrale éolienne}
+
+\input{act3}
+
+\input{bilan3}
+
+\begin{myexos}
+	\twoCol{
+		\begin{itemize}
+			\item \exo{3}{1752}
+			\item \exo{8}{176}
+		\end{itemize}
+	}
+\end{myexos}
+
+
+\section{Centrale thermique}
+
+
+
+\input{act4}
+
+
+\input{bilan4}
+
+\begin{myexos}
+	\twoCol{\begin{itemize}
+		\item \exo{4}{175}
+		\item \exo{11}{177}
+		\item \exo{15}{178}
+	\end{itemize}}
+\end{myexos}
+\appendix
+
+\newpage
+
+\section*{Correction des exercices}
+
+\subsection*{\Exo{4}{175}}
+
+\begin{enumerate}[label=\arabic*.]
+	\item Une tension variable peut être obtenue par \textbf{déplacement} d'un aimant au voisinage d'une \textbf{bobine}.
+	\item Un alternateur transforme l'énergie \textbf{mécanique} en énergie \textbf{électrique}.
+	\item L'\kw{alternateur} est la partie commune à toutes les \kw{centrales} électriques.
+	\item Une \textbf{partie} de l'énergie reçue ar une centrale électrique n'est pas transformée, on dit qu'elle est <<\textbf{perdue}>>.
+	\item Les combustibles qui alimentent les centrales \textbf{thermiques} sont des sources d'énergie non renouvelables.
+	\item L'eau en mouvement qui alimente les centrales \textbf{hydrauliques} est une source d'énergie renouvelable.
+	\item Le \textbf{vent} qui alimente les centrales éoliennes est une source d'énergie \textbf{renouvelable}.
+\end{enumerate}
+
+\subsection*{\Exo{6}{176}}
+
+\begin{tabular}{|@{ } c @{ }|@{ } l @{ }|@{ } l @{ }|}
+	\hline
+	\begin{tabular}[c]{@{}c@{}}Ordre des \\ opérations\end{tabular} & \multicolumn{1}{c|}{Opérations}              & Tension           \\ \hline
+	1                                                               & approcher l'aimant de la bobine              & positive          \\ \hline
+	2                                                               & éloigner l'aimant de la bobine               & \textbf{négative} \\ \hline
+	3                                                               & inverser les bornes du voltmètre             & \textbf{aucune}   \\ \hline
+	4                                                               & éloigner la bobine de l'aimant               & \textbf{négative} \\ \hline
+	5                                                               & approcher la bobine de l'aimant              & \textbf{positive} \\ \hline
+	6                                                               & déplacer solidairement l'aimant et la bobine & \textbf{aucune}   \\ \hline
+\end{tabular}
+
+\subsection*{\Exo{7}{176}}
+
+lampe allumée : énergie électrique.\\
+turbine en rotation, jet de vapeur, jet d'eau, vent, pales d'une éolienne en rotation : énergie mécanique.
+
+\subsection*{\exo{8}{176}}
+
+\begin{enumerate}[label=\arabic*.]
+	\item Dans une centrale hydraulique, 20 \%  ($ 100 - 80 = 20 $) de l'énergie n'est pas convertie, elle est <<perdue>> sous forme d'énergie mécanique.
+	\item Dans une centrale éolienne, 40 \%  ($ 100 - 60 = 40 $) de l'énergie n'est pas convertie, elle est <<perdue>> sous forme d'énergie mécanique.
+	\item  \ \\ \begin{center}
+		\includegraphics[scale=0.5]{exo8}
+	\end{center}
+\end{enumerate}
+
+\subsection*{\exo{9}{176}}
+
+\begin{center}
+	\includegraphics[scale=0.5]{exo9}
+\end{center}
+
+\subsection*{\exo{11}{177}}
+
+\begin{center}
+	\includegraphics[scale=0.6]{exo11}
+\end{center}
+
+\subsection*{\exo{12}{177}}
+
+\begin{enumerate}[label=\arabic*.]
+	\item Quand les feux sont allumés, une partie de l'énergie mécanique qu'il fournit est convertie en énergie électrique donc il doit fournir plus d'énergie musculaire.
+	\item En modifiant la position du levier de vitesse, il doit fournir une quantité d'énergie différente pour faire tourner les roues à la même vitesse.
+	\item Si une lampe s'éteint il y aura besoin de moins d'énergie électrique donc il aura besoin de faire moins d'efforts pour conserver une vitesse constante.
+\end{enumerate}
+
+\subsection*{\exo{15}{178}}
+
+\begin{enumerate}[label=\arabic*.]
+	\item L'essence fourni de l'énergie thermique au moteur.
+	\item Non toute l'énergie thermique fournie par l'essence n'est pas convertie, elle est perdue dans le circuit de refroidissement.
+	\item \ \\ \begin{center}
+		\includegraphics[scale=0.4]{exo15}
+	\end{center}
+\end{enumerate}
+
+
+\subsection*{\exo{16}{178}}
+
+%\twoCol{
+\begin{enumerate}[label=\arabic*.]
+	\item La tension change de sens chaque fois qu'une dent passe devant la bobine car quand une dent arrive devant la bobine l'aimant s'approche, puis lorsqu'elle continue son parcours, il s'éloigne.
+	\item Il y a 12 dents sur le disque, donc quand la roue fait un tour la tension prend 12 fois le même signe. 
+	\item $240 \div 12 = 20$, donc si la tension prend 240 fois le même signe pendant une seconde, la roue fait 20 tours.
+	\item $20 \times $ \num{0.8} $=$ \num{16}, donc en 1 seconde, le véhicule parcourt \num{16} $m$ sa vitesse est donc \num{16} $m/s$ soit \num{57600} $km/h$ (16 $\times $ \num{3600} $=$ \num{57600}).
+\end{enumerate}
+%}
+
+\end{document}

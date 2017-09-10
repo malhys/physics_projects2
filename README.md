@@ -1,2 +1,2 @@
-# physics_projects2
-cours de physuque chimie
+# physics_projects
+Cours de physique

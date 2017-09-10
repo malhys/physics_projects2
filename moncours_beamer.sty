@@ -1,0 +1,181 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{moncours_beamer}
+\usepackage{ulem}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{tikz,tkz-tab}
+\usetikzlibrary{shapes.geometric, arrows}
+
+
+
+%\definecolor{red}{rgb}{1.0, 0.0, 0.0}
+
+
+
+\defbeamertemplate{section in toc}{sections numbered roman}{%
+	\leavevmode%
+	{\Large {\color{BrickRed}  \MakeUppercase{\romannumeral\inserttocsectionnumber}.\ %
+	\inserttocsection\par}}}
+
+
+\defbeamertemplate{subsection in toc}{subsections numbered arabic}{%
+	\leavevmode%
+	$\quad${\color{blue} \MakeUppercase\inserttocsubsectionnumber.\ %
+			 \inserttocsubsection\par}}
+
+
+\setbeamertemplate{section in toc}[sections numbered roman]
+\setbeamertemplate{subsection in toc}[subsections numbered arabic]
+
+
+
+
+%----------------------------------------------------
+% Mise en forme
+%-----------------------------------------------------
+%Mise en évidence de termes clés
+\newcommand{\kw}[1]{\textcolor{BrickRed}{\underline{\textbf{#1}}}}
+\newcommand{\mykw}[1]{\textcolor{BrickRed}{\underline{\textbf{#1}}}}
+%------------------------------------------------------
+% Définitions
+
+% Singulier
+\newenvironment{mydef}{	
+	\begin{alertblock}{Définition}	
+	}{
+\end{alertblock}
+}
+
+% Pluriel
+\newenvironment{mydefs}{
+
+		
+		
+	\begin{alertblock}{Définitions}	
+	}{
+\end{alertblock}
+
+
+
+}
+
+
+%------------------------------------------------------
+% Propriétés
+
+% Singulier
+\newenvironment{myprop}{	
+	\begin{block}{Propriété}	
+	}{
+\end{block}
+}
+
+% Pluriel
+\newenvironment{myprops}{
+	
+	\begin{block}{Propriétés}	
+	}{
+\end{block}
+}
+
+
+%------------------------------------------------------
+% Exemples
+\newenvironment{myex}{
+	\begin{exampleblock}{Exemple}
+	}{
+\end{exampleblock}
+}
+%
+
+\newenvironment{myexs}{
+	\begin{exampleblock}{Exemples}
+	}{
+\end{exampleblock}
+}
+
+%------------------------------------------------------
+% Remarques
+\newenvironment{myrem}{
+	\begin{block}{Remarque}
+	}{
+\end{block}
+}
+
+\newenvironment{myrems}{
+	\begin{bock}{Remarques}
+	}{
+\end{bock}
+}
+
+
+%------------------------------------------------------
+% Rappels
+\newenvironment{myrap}{
+	\begin{block}{Rappel}
+	}{
+\end{block}
+}
+
+\newenvironment{myraps}{
+	\begin{block}{Rappels}
+	}{
+\end{block}
+}
+
+%------------------------------------------------------
+% Méthode
+\newenvironment{mymeth}{
+	\begin{block}{Méthode}
+	}{
+\end{block}
+}
+
+
+
+
+%------------------------------------------------------
+% Illustartion
+\newenvironment{myillus}{
+	\begin{block}{Illustration}
+	}{
+	\end{block}
+}
+
+
+%------------------------------------------------------
+% Rappels
+
+
+\newenvironment{myobj}{
+	\begin{block}{Objectifs}
+}{
+\end{block}
+}
+
+%------------------------------------------------------
+\newenvironment{myact}[1]{
+	\begin{block}{Activité #1}
+	}{
+	\end{block}
+}
+
+%------------------------------------------------------
+\newenvironment{mybilan}{	
+	\begin{alertblock}{\'A retenir}
+	}{
+	\end{alertblock}
+}
+
+\newenvironment{mybilan2}[1]{	
+	\begin{alertblock}{\'A retenir : #1}
+	}{
+	\end{alertblock}
+}
+%------------------------------------------------------
+\newenvironment{myrep}{
+	\begin{block}{Réponse}
+	}{
+\end{block}
+}

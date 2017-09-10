@@ -1,0 +1,182 @@
+%-------------------------------------------------------------------------------
+%          -Packages nécessaires pour écrire en Français et en UTF8-
+%-------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{numprint}
+\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[french, boxed]{algorithm2e}
+\usepackage{hyperref}
+
+
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%                          -Outils de mise en forme-
+%-------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{pdfstartview=XYZ}
+%\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{eurosym}
+
+
+\usepackage{anysize} %%pour pouvoir mettre les marges qu'on veut
+%\marginsize{2.5cm}{2.5cm}{2.5cm}{2.5cm}
+
+\usepackage{indentfirst} %%pour que les premier paragraphes soient aussi indentés
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\usepackage{variations}
+
+%-------------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------------
+%                  -Nécessaires pour écrire des mathématiques-
+%-------------------------------------------------------------------------------
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{xlop}
+\usepackage[output-decimal-marker={,}]{siunitx}
+%-------------------------------------------------------------------------------
+
+
+
+%-------------------------------------------------------------------------------
+% Pour pouvoir exploiter les fichiers directement dans beamer
+\newcommand{\pause}{\ }
+%-------------------------------------------------------------------------------
+%                    - Mise en forme avancée
+%-------------------------------------------------------------------------------
+
+\usepackage{ifthen}
+\usepackage{ifmtarg}
+
+
+\newcommand{\ifTrue}[2]{\ifthenelse{\equal{#1}{true}}{#2}{$\qquad \qquad$}}
+
+%\newcommand{\kword}[1]{\textcolor{red}{\underline{#1}}}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%                     -Mise en forme d'exercices-
+%-------------------------------------------------------------------------------
+%\newtheoremstyle{exostyle}
+%{\topsep}% espace avant
+%{\topsep}% espace apres
+%{}% Police utilisee par le style de thm
+%{}% Indentation (vide = aucune, \parindent = indentation paragraphe)
+%{\bfseries}% Police du titre de thm
+%{.}% Signe de ponctuation apres le titre du thm
+%{ }% Espace apres le titre du thm (\newline = linebreak)
+%{\thmname{#1}\thmnumber{ #2}\thmnote{. \normalfont{\textit{#3}}}}% composants du titre du thm : \thmname = nom du thm, \thmnumber = numéro du thm, \thmnote = sous-titre du thm
+
+%\theoremstyle{exostyle}
+%\newtheorem{exercice}{Exercice}
+%
+%\newenvironment{questions}{
+%\begin{enumerate}[\hspace{12pt}\bfseries\itshape a.]}{\end{enumerate}
+%} %mettre un 1 à la place du a si on veut des numéros au lieu de lettres pour les questions 
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%                    - Mise en forme de tableaux -
+%-------------------------------------------------------------------------------
+
+\renewcommand{\arraystretch}{1.7}
+
+\setlength{\tabcolsep}{1.2cm}
+
+%-------------------------------------------------------------------------------
+
+
+
+%-------------------------------------------------------------------------------
+%                    - Racourcis d'écriture -
+%-------------------------------------------------------------------------------
+%Droites
+\newcommand{\dte}[1]{$(#1)$}
+\newcommand{\fig}[1]{figure $#1$}
+\newcommand{\sym}{symétrique}
+\newcommand{\syms}{symétriques}
+\newcommand{\asym}{axe de symétrie}
+\newcommand{\asyms}{axes de symétrie}
+\newcommand{\seg}[1]{$[#1]$}
+\newcommand{\monAngle}[1]{$\widehat{#1}$}
+\newcommand{\bissec}{bissectrice}
+\newcommand{\mediat}{médiatrice}
+\newcommand{\ddte}[1]{$[#1)$}
+
+
+% Angles orientés (couples de vecteurs)
+\newcommand{\aopp}[2]{(\vec{#1}, \vec{#2})} %Les deuc vecteurs sont positifs
+\newcommand{\aopn}[2]{(\vec{#1}, -\vec{#2})} %Le second vecteur est négatif
+\newcommand{\aonp}[2]{(-\vec{#1}, \vec{#2})} %Le premier vecteur est négatif
+\newcommand{\aonn}[2]{(-\vec{#1}, -\vec{#2})} %Les deux vecteurs sont négatifs
+
+%Ensembles mathématiques
+\newcommand{\naturels}{\mathbb{N}} %Nombres naturels
+\newcommand{\relatifs}{\mathbb{Z}} %Nombres relatifs
+\newcommand{\rationnels}{\mathbb{Q}} %Nombres rationnels
+\newcommand{\reels}{\mathbb{R}} %Nombres réels
+\newcommand{\complexes}{\mathbb{C}} %Nombres complexes
+
+
+%Intégration des parenthèses aux cosinus
+\newcommand{\cosP}[1]{\cos\left(#1\right)}
+\newcommand{\sinP}[1]{\sin\left(#1\right)}
+
+
+%Probas stats
+\newcommand{\stat}{statistique}
+\newcommand{\stats}{statistiques}
+
+
+\newcommand{\homo}{homothétie}
+\newcommand{\homos}{homothéties}
+
+
+\newcommand{\mycoord}[3]{(\textcolor{red}{\num{#1}} ; \textcolor{Green}{\num{#2}} ; \textcolor{blue}{\num{#3}})}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%                    - Mise en page -
+%-------------------------------------------------------------------------------
+
+\newcommand{\twoCol}[1]{\begin{multicols}{2}#1\end{multicols}}
+
+
+\setenumerate[1]{font=\bfseries,label=\textit{\alph*})}
+\setenumerate[2]{font=\bfseries,label=\arabic*)}
+
+
+%-------------------------------------------------------------------------------
+%                    - Elements cours -
+%-------------------------------------------------------------------------------
+
+%Correction d'exercice
+\newcommand{\exoSec}[2]{\subsection*{Exercice #1 page #2}}
+%-------------------------------------------------------------------------------
+%                    - raccourcis d'écriture -
+%-------------------------------------------------------------------------------
+
+%Mise en évidence de termes clés
+\newcommand{\mykw}[1]{\textcolor{red}{\underline{\textbf{#1}}}}
+
+%Exercices
+\newcommand{\exo}[2]{exercice #1 page #2}
+\newcommand{\Exo}[2]{Exercice #1 page #2}
+

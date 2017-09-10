@@ -1,0 +1,332 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                               %
+%    	pas-math.sty  v1.06     encodage : UTF8     	             %
+%                                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                               %
+%           	Créé par Stéphane PASQUET 		         		    %
+%                                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2013/02/25 - Ajout de la commande \coordEsp{}{}{}
+% 2013/04/28 - Ajout de \pgcd{a}{b}
+% 2013/07/02 - Ajout de \ppcm{a}{b}
+%			   	Ajout des version étoilées à \N,\D, ... + \H
+% 2014/02/19 - v1.03 - Modification de la commande \arc en ajoutant le package yhmath 
+% 2014/03/16 - v1.04 - Remplacement de tous les \text{} par \mathrm{} 
+% 2014/05/09 - v1.05 - Ajout de la commande "\wideparen" et suppression de l'appel à yhmath (incompatibilité avec kpfonts)
+% 2014/12/02 - v1.06 - Modification des commandes "\esp", "\var" et \ectype" (remplacement de \mathrm par \text pour permettre d'écrire en mode mathématique dans les parenthèses
+
+% Informations générales
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pas-math}[2014/05/09]
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+\RequirePackage{esvect}
+\RequirePackage{ifthen}
+\RequirePackage{stmaryrd}
+
+% Intervalles & ensembles
+
+% [a;b]
+\ifthenelse{\isundefined{\intervFF}}
+	{\newcommand*{\intervFF}[2]{\mbox{\ensuremath{\left[#1\mathpunct{};#2\right]}}}}
+	{\renewcommand*{\intervFF}[2]{\mbox{\ensuremath{\left[#1\mathpunct{};#2\right]}}}\typeout{La commande \string\intervFF\space a ete redefinie par pas-math.}}
+
+% [a,b[
+\ifthenelse{\isundefined{\intervFO}}
+	{\newcommand*{\intervFO}[2]{\mbox{\ensuremath{\left[#1\mathpunct{};#2\right[}}}}
+	{\renewcommand*{\intervFO}[2]{\mbox{\ensuremath{\left[#1\mathpunct{};#2\right[}}}\typeout{La commande \string\intervFO\space a ete redefinie par pas-math.}}
+
+% ]a;b]
+\ifthenelse{\isundefined{\intervOF}}
+	{\newcommand*{\intervOF}[2]{\mbox{\ensuremath{\left]#1\mathpunct{};#2\right]}}}}
+	{\renewcommand*{\intervOF}[2]{\mbox{\ensuremath{\left]#1\mathpunct{};#2\right]}}}\typeout{La commande \string\intervOF\space a ete redefinie par pas-math.}}
+
+% ]a,b[
+\ifthenelse{\isundefined{\intervOO}}
+	{\newcommand*{\intervOO}[2]{\mbox{\ensuremath{\left]#1\mathpunct{};#2\right[}}}}
+	{\renewcommand*{\intervOO}[2]{\mbox{\ensuremath{\left]#1\mathpunct{};#2\right[}}}\typeout{La commande \string\intervOO\space a ete redefinie par pas-math.}}
+	 
+% llbracket, rrbracket
+
+\ifthenelse{\isundefined{\entInterv}}
+	{\newcommand*{\entInterv}[2]{\ensuremath{\left\llbracket#1\mathpunct{};#2\right\rrbracket}}}
+	{\renewcommand*{\entInterv}[2]{\ensuremath{\left\llbracket#1\mathpunct{};#2\right\rrbracket}\typeout{La commande \string\intInterv\space a ete redefinie par pas-math.}}}
+
+% Ensembles N, Z, D, R, C, Q
+\ifthenelse{\isundefined{\N}}
+	{\newcommand*{\N}{\@ifstar{\n@star}{\n@nostar}}}
+	{\renewcommand*{\N}{\@ifstar{\n@star}{\n@nostar}}\typeout{La commande \string\N\space a ete redefinie par pas-math.}}
+\newcommand*{\n@nostar}{\ensuremath{\mathbb{N}}}
+\newcommand*{\n@star}{\ensuremath{\mathbb{N}^{*}}}
+	
+\ifthenelse{\isundefined{\Z}}
+	{\newcommand*{\Z}{\@ifstar{\z@star}{\z@nostar}}}
+	{\renewcommand*{\Z}{\@ifstar{\z@star}{\z@nostar}}\typeout{La commande \string\Z\space a ete redefinie par pas-math.}}
+\newcommand*{\z@nostar}{\ensuremath{\mathbb{Z}}}
+\newcommand*{\z@star}{\ensuremath{\mathbb{Z}^{*}}}
+
+\ifthenelse{\isundefined{\D}}
+	{\newcommand*{\D}{\@ifstar{\d@star}{\d@nostar}}}
+	{\renewcommand*{\D}{\@ifstar{\d@star}{\d@nostar}}\typeout{La commande \string\D\space a ete redefinie par pas-math.}}
+\newcommand*{\d@nostar}{\ensuremath{\mathbb{D}}}
+\newcommand*{\d@star}{\ensuremath{\mathbb{D}^{*}}}
+
+\ifthenelse{\isundefined{\Q}}
+	{\newcommand*{\Q}{\@ifstar{\q@star}{\q@nostar}}}
+	{\renewcommand*{\Q}{\@ifstar{\q@star}{\q@nostar}}\typeout{La commande \string\Q\space a ete redefinie par pas-math.}}
+\newcommand*{\q@nostar}{\ensuremath{\mathbb{Q}}}
+\newcommand*{\q@star}{\ensuremath{\mathbb{Q}^{*}}}
+
+\ifthenelse{\isundefined{\R}}
+	{\newcommand*{\R}{\@ifstar{\r@star}{\r@nostar}}}
+	{\renewcommand*{\R}{\@ifstar{\r@star}{\r@nostar}}\typeout{La commande \string\R\space a ete redefinie par pas-math.}}
+\newcommand*{\r@nostar}{\ensuremath{\mathbb{R}}}
+\newcommand*{\r@star}{\ensuremath{\mathbb{R}^{*}}}
+
+\ifthenelse{\isundefined{\C}}
+	{\newcommand*{\C}{\@ifstar{\c@star}{\c@nostar}}}
+	{\renewcommand*{\C}{\@ifstar{\c@star}{\c@nostar}}\typeout{La commande \string\C\space a ete redefinie par pas-math.}}
+\newcommand*{\c@nostar}{\ensuremath{\mathbb{C}}}
+\newcommand*{\c@star}{\ensuremath{\mathbb{C}^{*}}}
+
+\ifthenelse{\isundefined{\H}}
+	{\newcommand*{\H}{\@ifstar{\h@star}{\h@nostar}}}
+	{\renewcommand*{\H}{\@ifstar{\h@star}{\h@nostar}}\typeout{La commande \string\H\space a ete redefinie par pas-math.}}
+\newcommand*{\h@nostar}{\ensuremath{\mathbb{H}}}
+\newcommand*{\h@star}{\ensuremath{\mathbb{H}^{*}}}
+
+% Repères et analyse fonctionnelle
+
+% Repère (O;i,j)
+
+\ifthenelse{\isundefined{\Rij}}
+	{\newcommand*{\Rij}[1][O]{\ensuremath{\left(\mathrm{#1}\mathpunct{};\vv{\imath}\mathpunct{},\vv{\jmath} \right)}}}
+	{\renewcommand*{\Rij}[1][O]{\ensuremath{\left(\mathrm{#1}\mathpunct{};\vv{\imath}\mathpunct{},\vv{\jmath} \right)}}\typeout{La commande \string\Rij\space a ete redefinie par pas-math.}}
+
+% Repère (O;i,j,k)
+
+\newcommand\pas@Rijk[1]{%
+	\begingroup	\setbox0\hbox{$\vcenter{\hbox{$\mathrm{#1}\mathpunct{};\vv{\imath}\mathpunct{},\vv{\jmath}\mathpunct{},\vv{k}$}}$}%
+   \setbox1\hbox{$\mathrm{#1}\mathpunct{};\vv{\imath}\mathpunct{},\vv{\jmath}\mathpunct{},\vv{k}$}%
+   \leavevmode\raise\dimexpr\dp0-\dp1\relax%
+   \hbox{$\left(\box0 \right)$}%
+   \endgroup
+}
+\ifthenelse{\isundefined{\Rijk}}	
+	{\newcommand*{\Rijk}[1][O]{\pas@Rijk{#1}}}
+	{\renewcommand*{\Rijk}[1][O]{\pas@Rijk{#1}}\typeout{La commande \string\Rijk\space a ete redefinie par pas-math.}}
+
+% Repère (O;u,v)
+
+\ifthenelse{\isundefined{\Ruv}}	
+	{\newcommand*{\Ruv}[1][O]{\ensuremath{\left(\mathrm{O}\mathpunct{};\vv{u}\mathpunct{},\vv{v} \right)}}}
+	{\renewcommand*{\Ruv}[1][O]{\ensuremath{\left(\mathrm{O}\mathpunct{};\vv{u}\mathpunct{},\vv{v} \right)}}\typeout{La commande \string\Ruv\space a ete redefinie par pas-math.}}
+
+% fonction
+	
+\ifthenelse{\isundefined{\fonction}}		
+	{\newcommand*{\fonction}[5][f]{\ensuremath{\begin{aligned}[t]#1\mathpunct{}:&~#2 \rightarrow #3\\&~#4 \mapsto #5\end{aligned}}}}
+	{\renewcommand*{\fonction}[5][f]{\ensuremath{\begin{aligned}[t]#1\mathpunct{}:&~#2 \rightarrow #3\\&~#4 \mapsto #5\end{aligned}}}\typeout{La commande \string\fonction\space a ete redefinie par pas-math.}}
+
+% dx
+	
+\ifthenelse{\isundefined{\dx}}		
+	 {\newcommand*{\dx}[1][x]{\ensuremath{~\mathrm{d}#1}}}
+	 {\renewcommand*{\dx}[1][x]{\ensuremath{~\mathrm{d}#1}}\typeout{La commande \string\dx\space a ete redefinie par pas-math.}}
+
+% dint
+
+\ifthenelse{\isundefined{\dint}}	 
+	{\newcommand*{\dint}{\displaystyle\int}}
+	{\renewcommand*{\dint}{\displaystyle\int}\typeout{La commande \string\dint\space a ete redefinie par pas-math.}}
+
+% coord{a}{b}
+
+\ifthenelse{\isundefined{\coord}}	 	
+	{\newcommand*{\coord}[2]{\ensuremath{\left(#1\mathpunct{};#2\right)}}}
+	{\renewcommand*{\coord}[2]{\ensuremath{\left(#1\mathpunct{};#2\right)}}\typeout{La commande \string\coord\space a ete redefinie par pas-math.}}
+
+% coordEsp{a}{b}{c}
+
+\ifthenelse{\isundefined{\coordEsp}}	 	
+	{\newcommand*{\coordEsp}[3]{\ensuremath{\left(#1\mathpunct{};#2\mathpunct{};#3\right)}}}
+	{\renewcommand*{\coordEsp}[3]{\ensuremath{\left(#1\mathpunct{};#2\mathpunct{};#3\right)}}\typeout{La commande \string\coord\space a ete redefinie par pas-math.}}
+
+% limite
+
+\ifthenelse{\isundefined{\limite}}		
+	{\newcommand*{\limite}[4][]{\ensuremath{\displaystyle\lim_{\substack{#2\to#3\\#1}}#4}}}
+	{\renewcommand*{\limite}[4][]{\ensuremath{\displaystyle\lim_{\substack{#2\to#3\\#1}}#4}}\typeout{La commande \string\limite\space a ete redefinie par pas-math.}}
+
+% -------> Notations en géométrie <----------
+
+% Angle géométrique
+
+\ifthenelse{\isundefined{\angle}}
+	{\newcommand*{\angle}[1]{\ensuremath{\widehat{\mathrm{#1}}}}}
+	{\renewcommand*{\angle}[1]{\ensuremath{\widehat{\mathrm{#1}}}}\typeout{La commande \string\angle\space a ete redefinie par pas-math.}}
+
+% Angle orienté
+
+\newcommand\pas@angleor[2]{%
+	\begingroup	\setbox0\hbox{$\vcenter{\hbox{$\vv{\mathrm{#1}}\mathpunct{},\vv{\mathrm{#2}}$}}$}%
+   \setbox1\hbox{$\vv{\mathrm{#1}}\mathpunct{},\vv{\mathrm{#2}}$}%
+   \leavevmode\raise\dimexpr\dp0-\dp1\relax%
+   \hbox{$\left(\box0 \right)$}%
+   \endgroup
+}
+\ifthenelse{\isundefined{\angleor}}	
+	{\newcommand*{\angleor}[2]{\pas@angleor{#1}{#2}}}
+	{\renewcommand*{\angleor}[2]{\pas@angleor{#1}{#2}}\typeout{La commande \string\angleor\space a ete redefinie par pas-math.}}
+
+% Arc de cercle
+	
+\ifthenelse{\isundefined{\arc}}		
+	{\newcommand*{\arc}[1]{\ensuremath{\wideparen{\mathrm{#1}}}}}
+	{\renewcommand*{\arc}[1]{\ensuremath{\wideparen{\mathrm{#1}}}}\typeout{La commande \string\arc\space a ete redefinie par pas-math.}}
+
+% Egalité de Pythagore
+
+\ifthenelse{\isundefined{\pythagore}}		
+	{\newcommand*{\pythagore}[3]{\ensuremath{\mathrm{#1}\hspace*{1pt}^2=\mathrm{#2}\hspace*{1pt}^2+\mathrm{#3}\hspace*{1pt}^2}}}
+	{\renewcommand*{\pythagore}[3]{\ensuremath{\mathrm{#1}\hspace*{1pt}^2=\mathrm{#2}\hspace*{1pt}^2+\mathrm{#3}\hspace*{1pt}^2}}\typeout{La commande \string\pythagore\space a ete redefinie par pas-math.}}
+
+% Egalité de Thalès
+	
+\ifthenelse{\isundefined{\thales}}	
+	{\newcommand*{\thales}[6]{\ensuremath{\dfrac{\mathrm{#1}}{\mathrm{#2}}=\dfrac{\mathrm{#3}}{\mathrm{#4}}=\dfrac{\mathrm{#5}}{\mathrm{#6}}}}}
+	{\renewcommand*{\thales}[6]{\ensuremath{\dfrac{\mathrm{#1}}{\mathrm{#2}}=\dfrac{\mathrm{#3}}{\mathrm{#4}}=\dfrac{\mathrm{#5}}{\mathrm{#6}}}}\typeout{La commande \string\thales\space a ete redefinie par pas-math.}}
+
+% Egalité courte (2 rapports) de Thalès
+
+\ifthenelse{\isundefined{\thalesShort}}		
+	{\newcommand*{\thalesShort}[4]{\ensuremath{\dfrac{\mathrm{#1}}{\mathrm{#2}}=\dfrac{\mathrm{#3}}{\mathrm{#4}}}}}
+	{\renewcommand*{\thalesShort}[4]{\ensuremath{\dfrac{\mathrm{#1}}{\mathrm{#2}}=\dfrac{\mathrm{#3}}{\mathrm{#4}}}}\typeout{La commande \string\thalesShort\space a ete redefinie par pas-math.}}
+
+% Définition vectorielle d'un barycentre
+
+\ifthenelse{\isundefined{\barycentre}}		
+	{\newcommand*{\barycentre}[4][G]{\ensuremath{\vv{\mathrm{#1#2}}+\vv{\mathrm{#1#3}}+\vv{\mathrm{#1#4}}=\vv{0}}}}
+	{\renewcommand*{\barycentre}[4][G]{\ensuremath{\vv{\mathrm{#1#2}}+\vv{\mathrm{#1#3}}+\vv{\mathrm{#1#4}}=\vv{0}}}\typeout{La commande \string\barycentre\space a ete redefinie par pas-math.}}
+
+% Norme
+\newcommand\pas@norme[1]{%
+	\begingroup%
+	\setbox0 \hbox{$\vv{\mathrm{#1}}$}%
+   \edef\drule{\vrule height\the\dimexpr\ht0+.25ex\relax depth\the\dimexpr\dp0+.25ex\relax width.6pt }%
+   \quitvmode
+   \hbox{\drule\kern.16667em\drule\kern.16667em \box0 \kern.16667em\drule\kern.16667em\drule}
+   \endgroup
+}
+\ifthenelse{\isundefined{\norme}}	
+	{\newcommand*{\norme}[1]{\pas@norme{#1}}}
+	{\renewcommand*{\norme}[1]{\pas@norme{#1}}\typeout{La commande \string\norme\space a ete redefinie par pas-math.}}
+
+% Produit scalaire
+\ifthenelse{\isundefined{\prodscal}}	
+	{\newcommand*{\prodscal}[2]{\ensuremath{\vv{\mathrm{#1}}\cdot\vv{\mathrm{#2}}}}}
+	{\renewcommand*{\prodscal}[2]{\ensuremath{\vv{\mathrm{#1}}\cdot\vv{\mathrm{#2}}}\typeout{La commande \string\prodscal\space a ete redefinie par pas-math.}}}
+
+
+% ---------- Probabilités <--------------
+
+\ifthenelse{\isundefined{\evcont}}
+	{\newcommand*{\evcont}[1]{\ensuremath{\overline{\mathrm{#1}}}}}
+	{\renewcommand*{\evcont}[1]{\ensuremath{\overline{\mathrm{#1}}}}\typeout{La commande \string\evcont\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\union}}	
+	{\newcommand*{\union}[2]{\ensuremath{\mathrm{#1}\cup\mathrm{#2}}}}
+	{\renewcommand*{\union}[2]{\ensuremath{\mathrm{#1}\cup\mathrm{#2}}}\typeout{La commande \string\union\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\inter}}	
+	{\newcommand*{\inter}[2]{\ensuremath{\mathrm{#1}\cap\mathrm{#2}}}}
+	{\renewcommand*{\inter}[2]{\ensuremath{\mathrm{#1}\cap\mathrm{#2}}}\typeout{La commande \string\inter\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\proba}}	
+	{\newcommand*{\proba}[1]{\ensuremath{\mathrm{P}\left(\mathrm{#1}\right)}}}
+	{\renewcommand*{\proba}[1]{\ensuremath{\mathrm{P}\left(\mathrm{#1}\right)}}\typeout{La commande \string\proba\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\probamin}}	
+	{\newcommand*{\probamin}[1]{\ensuremath{p\left(\mathrm{#1}\right)}}}
+	{\renewcommand*{\probamin}[1]{\ensuremath{p\left(\mathrm{#1}\right)}}\typeout{La commande \string\probamin\space a ete redefinie par pas-math.}}
+	
+\ifthenelse{\isundefined{\esp}}
+	{\newcommand*{\esp}[2][\mathbb{E}]{\ensuremath{#1\left(\text{#2}\right)}}}
+	{\renewcommand*{\esp}[2][\mathbb{E}]{\ensuremath{#1\left(\text{#2}\right)}}\typeout{La commande \string\esp\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\var}}
+	{\newcommand*{\var}[2][\mathbb{V}]{\ensuremath{#1\left(\text{#2}\right)}}}
+	{\renewcommand*{\var}[2][\mathbb{V}]{\ensuremath{#1\left(\text{#2}\right)}}\typeout{La commande \string\var\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\ectype}}
+	{\newcommand*{\ectype}[1]{\ensuremath{\sigma\left(\text{#1}\right)}}}
+	{\renewcommand*{\ectype}[1]{\ensuremath{\sigma\left(\text{#1}\right)}}\typeout{La commande \string\ectype\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\probavar}}
+	{\newcommand*{\probavar}[3][=]{\ensuremath{\mathrm{P}\left(\mathrm{#2}#1#3\right)}}}
+	{\renewcommand*{\probavar}[3][=]{\ensuremath{\mathrm{P}\left(\mathrm{#2}#1#3\right)}}\typeout{La commande \string\probavar\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\probacond}}
+	{\newcommand*{\probacond}[2]{\ensuremath{\mathrm{P}_{\mathrm{#2}}\left(\mathrm{#1}\right)}}}
+	{\renewcommand*{\probacond}[2]{\ensuremath{\mathrm{P}_{\mathrm{#2}}\left(\mathrm{#1}\right)}}\typeout{La commande \string\probacond\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\probacondmin}}
+	{\newcommand*{\probacondmin}[2]{\ensuremath{p_{\mathrm{#2}}\left(\mathrm{#1}\right)}}}
+	{\renewcommand*{\probacondmin}[2]{\ensuremath{p_{\mathrm{#2}}\left(\mathrm{#1}\right)}}\typeout{La commande \string\probacondmin\space a ete redefinie par pas-math.}}
+
+% Divers
+\ifthenelse{\isundefined{\fact}}
+	{\newcommand*{\fact}[1]{\ensuremath{#1\mathpunct{}!}}}
+	{\renewcommand*{\fact}[1]{\ensuremath{#1\mathpunct{}!}}\typeout{La commande \string\fact\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\suite}}
+	{\newcommand*{\suite}[3]{\ensuremath{\left(#1_#2\right)_{#3}}}}
+	{\renewcommand*{\suite}[3]{\ensuremath{\left(#1_#2\right)_{#3}}}\typeout{La commande \string\suite\space a ete redefinie par pas-math.}}
+	
+\ifthenelse{\isundefined{\e}}
+	{\newcommand*{\e}{{\rm e}}}
+	{\renewcommand*{\e}{{\rm e}}\typeout{La commande \string\e\space a ete redefinie par pas-math.}}
+
+\ifthenelse{\isundefined{\i}}
+	{\newcommand*{\i}{{\rm i}}}
+	{\renewcommand*{\i}{{\rm i}}\typeout{La commande \string\i\space a ete redefinie par pas-math.}}
+	
+\ifthenelse{\isundefined{\j}}
+	{\newcommand*{\j}{{\rm j}}}
+	{\renewcommand*{\j}{{\rm j}}\typeout{La commande \string\j\space a ete redefinie par pas-math.}}
+	
+\ifthenelse{\isundefined{\jexp}}
+	{\newcommand*{\jexp}{\ensuremath{\e^{\i\frac{\pi}{3}}}}}
+	{\renewcommand*{\jexp}{\ensuremath{\e^{\i\frac{\pi}{3}}}}\typeout{La commande \string\jexp\space a ete redefinie par pas-math.}}
+	
+\ifthenelse{\isundefined{\jalg}}
+	{\newcommand*{\jalg}{\ensuremath{\frac{1}{2}+\i\frac{\sqrt{3}}{2}}}}
+	{\renewcommand*{\jalg}{\ensuremath{\frac{1}{2}+\i\frac{\sqrt{3}}{2}}}\typeout{La commande \string\jalg\space a ete redefinie par pas-math.}}
+	
+
+% Pourcentages
+
+\ifthenelse{\isundefined{\poucent}}
+	{\newcommand*{\pourcent}[1]{\mbox{\ensuremath{#1\mathpunct{}\%}}}}
+	{\renewcommand*{\pourcent}[1]{\mbox{\ensuremath{#1\mathpunct{}\%}}}}
+	
+% PGCD
+
+\ifthenelse{\isundefined{\pgcd}}
+	{\newcommand{\pgcd}{\@ifstar{\pgcd@star}{\pgcd@nostar}}}
+	{\renewcommand{\pgcd}{\@ifstar{\pgcd@star}{\pgcd@nostar}}}
+	
+\newcommand*{\pgcd@nostar}[2]{\mbox{\ensuremath{\mathrm{pgcd}\left(#1\mathpunct{};\mathpunct{}#2\right)}}}	
+\newcommand*{\pgcd@star}[2]{\mbox{\ensuremath{\mathrm{PGCD}\left(#1\mathpunct{};\mathpunct{}#2\right)}}}	
+% PPCM
+
+\ifthenelse{\isundefined{\ppcm}}
+	{\newcommand{\ppcm}{\@ifstar{\ppcm@star}{\ppcm@nostar}}}
+	{\renewcommand{\ppcm}{\@ifstar{\ppcm@star}{\ppcm@nostar}}}
+
+\newcommand*{\ppcm@nostar}[2]{\mbox{\ensuremath{\mathrm{ppcm}(#1\mathpunct{};\mathpunct{}#2)}}}
+\newcommand*{\ppcm@star}[2]{\mbox{\ensuremath{\mathrm{PPCM}(#1\mathpunct{};\mathpunct{}#2)}}}
+\endinput
