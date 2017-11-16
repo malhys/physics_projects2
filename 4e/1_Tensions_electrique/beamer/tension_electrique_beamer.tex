@@ -1,0 +1,129 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme{}
+
+\input{../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+\usepackage{../../../moncours_beamer}
+
+
+
+
+
+\graphicspath{{../img/}}
+%Quelles sont les deux sortes de sources de lumière
+\title{La tension électrique}
+\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Mesure d'une tension électrique}
+
+
+
+\begin{frame}
+	\begin{block}{Rappel}
+		Un \kw{dipôle} est un composant électrique qui possède deux bornes (piles, lampes, interrupteurs, etc .).
+	\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+
+\begin{alertblock}{}
+	L'unité de mesure de la tension électrique est le \kw{volt} (symbole $V$). Elle se mesure avec un \kw{voltmètre}.
+	Pour mesurer la tension électrique d'une pile, on relie la \kw{borne rouge} du voltmètre à la \kw{borne $[+]$} de la pile et \kw{l'autre borne} du voltmètre à la \kw{borne $[-]$}.
+	
+	Pour mesurer la tension aux bornes d'un dipôle placé dans un circuit, on branche un \kw{voltmètre en dérivation} entre les bornes de ce dipôle. Il existe une \kw{tension électrique} entre les bornes d'un \kw{interrupteur ouvert} placé dans un circuit.
+	La tension électrique entre les bornes d'un fil de connexion est nulle.
+\end{alertblock}
+\end{frame}
+
+
+\section{Adaptation d'un dipôle}
+
+\begin{frame}
+\begin{alertblock}{}
+		La \kw{tension nominale} notée sur un appareil électrique est une indication de fonctionnement correct.
+	Si la tension électrique aux bornes d'un dipôle est \kw{proche de sa tension nominale}, alors il y a \kw{adaptation} du dipôle au générateur. 
+	Il y a \kw{sous-tension} si la tension est inférieure à la tension nominale. Il y a \kw{surtension} si elle est supérieure, le dipôle risque d'être détérioré.
+\end{alertblock}
+\end{frame}
+
+
+\section{Dipôles en série et en dérivation}
+
+
+\begin{frame}
+
+	\begin{block}
+
+	
+		\begin{itemize}
+			\item Dans un \kw{circuit série} :
+			\begin{itemize}
+				\item la valeur de la tension entre les bornes d'un dipôle ne \kw{dépend pas de sa position} dans le circuit.
+				\item la valeur de la \kw{tension $U$} aux bornes du générateur est égale à la \kw{somme des valeurs des tension $U_1$ et $U_2$} entre les bornes des dipôles : c'est la \kw{loi d'additivité des tensions}.
+				
+
+				\vspace*{-0.5cm}
+				
+				{\Large \textcolor{red}{\begin{equation*}
+					U=U_1+U_2
+				\end{equation*}}}
+				\vspace*{-0.5cm}
+				
+			\end{itemize}
+			
+			\item Dans un circuit comportant des \kw{dérivations}, la valeur de la \kw{tension est la même} entre les bornes des dipôles branchés en \kw{dérivation}.
+			
+				\vspace*{-0.5cm}
+
+			{\Large \textcolor{red}{\begin{equation*}
+				U=U_1=U_2
+			\end{equation*}}}
+			\vspace*{-0.5cm}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+%\section{Reconnaître le dioxyde de carbone}
+%
+%\begin{frame}
+%	\input{../activite4}
+%\end{frame}
+%
+%
+%\begin{frame}
+%	\input{../bilan4}
+%\end{frame}
+
+\end{document}

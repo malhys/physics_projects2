@@ -1,0 +1,164 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+%\usepackage{../../pas-math}
+\usepackage{../../moncours}
+
+
+
+\input{../../utils_maths}
+
+
+\begin{document}
+	
+	
+\chap[num=14, color=blue]{Tension électrique}{Olivier FINOT, \today }	
+
+\section{Mesure d'une tension électrique}
+
+\begin{myrap}
+	Un \kw{dipôle} est un composant électrique qui possède deux bornes (piles, lampes, interrupteurs, etc .).
+\end{myrap}
+
+
+\begin{mybilan}
+	L'unité de mesure de la tension électrique est le \kw{volt} (symbole $V$). Elle se mesure avec un \kw{voltmètre}.
+	Pour mesurer la tension électrique d'une pile, on relie la \kw{borne rouge} du voltmètre à la \kw{borne $[+]$} de la pile et l'autre borne du voltmètre à la borne $[-]$.
+	
+	Pour mesurer la tension aux bornes d'un dipôle placé dans un circuit, on branche un \kw{voltmètre en dérivation} entre les bornes de ce dipôle. Il existe une \kw{tension électrique} entre les bornes d'un \kw{interrupteur ouvert} placé dans un circuit.
+	La tension électrique entre les bornes d'un fil de connexion est nulle.
+\end{mybilan}
+
+\begin{myexos}
+	\twoCol{
+	\begin{itemize}
+		\item \exo{5}{97}
+		\item \exo{6}{97}
+		\item \exo{7}{97}
+		\item \exo{8}{97}
+		\item \exo{15}{98}
+		\item \exo{17}{98}		
+	\end{itemize}}
+\end{myexos}
+
+
+\section{Adaptation d'un dipôle}
+
+\begin{mybilan}
+	La \kw{tension nominale} notée sur un appareil électrique est une indication de fonctionnement correct.
+	Si la tension électrique aux bornes d'un dipôle est \kw{proche de sa tension nominale}, alors il y a \kw{adaptation} du dipôle au générateur. 
+	Il y a \kw{sous-tension} si la tension est inférieure à la tension nominale. Il y a \kw{surtension} si elle est supérieure, le dipôle risque d'être détérioré. 
+\end{mybilan}
+
+\begin{myex}
+	\twoCol{
+		\begin{itemize}
+			\item \exo{14}{98}
+			\item \exo{18}{99}
+			\item \exo{20}{99}
+		\end{itemize}
+	}
+\end{myex}
+
+\section{Dipôles en série et en dérivation}
+
+
+\begin{mybilan}
+	\begin{itemize}
+		\item Dans un \kw{circuit série} :
+		\begin{itemize}
+			\item la valeur de la tension entre les bornes d'un dipôle ne \kw{dépend pas de sa position} dans le circuit.
+			\item la valeur de la \kw{tension $U$} aux bornes du générateur est égale à la \kw{somme des valeurs des tension $U_1$ et $U_2$} entre les bornes des dipôles : c'est la \kw{loi d'additivité des tensions}.
+			
+			\vspace*{-1cm}
+			
+			\kw{\begin{center}
+				\begin{equation*}
+					U=U_1+U_2
+				\end{equation*}
+			\end{center}}
+		\end{itemize}
+	
+		\item Dans un circuit comportant des \kw{dérivations}, la valeur de la \kw{tension est la même} entre les bornes des dipôles branchés en \kw{dérivation}.
+		
+		\vspace*{-1cm}
+		
+		\kw{\begin{center}
+				\begin{equation*}
+					U=U_1=U_2
+				\end{equation*}
+		\end{center}}
+	\end{itemize}
+\end{mybilan}
+
+
+\begin{myex}
+	\twoCol{
+		\begin{itemize}
+			\item \exo{8}{110}
+			\item \exo{10}{110}
+			\item \exo{11}{110}
+			\item \exo{12}{111}
+			\item \exo{17}{111}
+			\item \exo{18}{111}
+			\item \exo{19}{111}
+			\item \exo{20}{111}
+		\end{itemize}
+	}
+\end{myex}
+
+\appendix
+
+
+
+\newpage
+
+\section*{Correction des exercices}
+
+\subsection*{\exo{5}{97}}
+
+\twoCol{
+\begin{itemize}
+	\item 1 $mV$ $=$ \textbf{\num{0.001}} $V$
+	\item 1 $V$ $=$ \textbf{\num{1000}} $mV$
+	\item 1 $kV$ $=$ \textbf{\num{1000}} $V$
+	\item 1 $V$ $=$ \textbf{\num{0.001}} $kV$
+	\item 1 $kV$ $=$ \textbf{\num{1000000}} $mV$
+\end{itemize}}
+
+\subsection*{\exo{6}{97}}
+
+
+	\begin{enumerate}
+		\item Incorrect : la borne COM du voltmètre doit être reliée à la borne négative $(-)$ du générateur.
+		\item Incorrect : la borne rouge du voltmètre doit être reliée à la borne positive $(+)$ du générateur.
+		\item Le montage est correct.
+	\end{enumerate}
+
+
+\subsection*{\exo{7}{97}}
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{multicols}
+
+\subsection*{\exo{8}{97}}
+
+
+	\begin{enumerate}[label=\alph*)]
+		\item 
+	\end{enumerate}
+
+\subsection*{\exo{14}{98}}
+
+\subsection*{\exo{15}{98}}
+
+\subsection*{\exo{17}{98}}
+
+\subsection*{\exo{18}{99}}
+
+\subsection*{\exo{20}{99}}
+\end{document}]
