@@ -1,0 +1,97 @@
+\documentclass[a4paper,11pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../monexam}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\usepackage{fullpage}
+\author{\ }
+\date{29 Novembre 2017}
+\title{Sciences Physiques : DS n° 2}
+
+
+\begin{document}
+%	\usepackage{fancyhdr}
+%	
+%	\pagestyle{fancy}
+%	\fancyhf{}
+	%\rhead{Share\LaTeX}
+
+	\maketitle
+\vspace*{-0.5cm}	
+\section{Deux lampes en dérivation}
+
+Deux lampes identiques de tension nominale 6 volts, sont alimentées par un générateur. Les lampes sont montées en dérivation et leur éclat est normal.
+
+\begin{questions}
+	\question Représenter un schéma du montage.
+	
+	\makeemptybox{5cm}
+	
+	\question La tension aux bornes du générateur est-elle égale à 3 volts, 6 volts ou 12 volts ? Justifier la réponse.
+	
+	\fillwithdottedlines{2cm}
+\end{questions}
+
+\section{Mélange de dipôles}
+
+Dans un circuit série comprenant une pile, une lampe, un moteur et une résistance, on a mesuré les valeurs suivantes : $U_{pile}= 12 V$, $U_{moteur}= \num{6.1} V$, $U_{résistance}= \num{3.4} V$.
+
+\begin{questions}
+	\question Représenter un schéma du montage.
+	
+	\makeemptybox{5cm}
+	
+	\question Calculer la valeur de la tension aux bornes de la lampe.
+	\fillwithdottedlines{2cm}
+\end{questions}
+
+\section{Des mesures inachevées}
+
+Gwenaël, Erwann et Marine ont réalisé chacun le montage correspondant au schéma ci-dessous. Ils ont utilisé des dipôles différents et ont mesuré la tension entre les bornes de chaque dipôle.
+
+\begin{center}
+	\includegraphics[scale=0.4]{circuit}
+\end{center}
+
+\begin{questions}
+	\question Faire une liste du matériel qu'ils ont utilisé. Préciser le mode de branchement des appareils de mesure.
+	\fillwithdottedlines{3cm}
+	
+	\question Ils ont réuni toutes leurs valeurs dans un tableau, mais ils n'ont pas recopié toutes leurs valeurs :
+	
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{tension}      & $U$            & $U_1$         & $U_2$          \\ \hline
+		expérience de Gwenaël & $\num{4.45} \; V$ &               & $\num{1.95} \; V$ \\ \hline
+		expérience de Erwann  & $\num{1.54} \; V$ & $\num{0.48} \;V$ &                \\ \hline
+		expérience de Marine  &                & $\num{0.65} \; V$ & $\num{2.67} \; V$ \\ \hline
+	\end{tabular}
+
+	\ \\
+	Compléter le tableau.
+\end{questions}
+\ \label{LastPage}
+
+\end{document}
