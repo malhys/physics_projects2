@@ -1,0 +1,108 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+%\usepackage{../../pas-math}
+\usepackage{../../moncours}
+
+
+
+\input{../../utils_maths}
+
+
+\begin{document}
+	
+	
+\chap[num=3, color=blue]{Intensité électrique}{Olivier FINOT, \today }	
+
+\section{Mesure d'une intensité électrique}
+
+
+\begin{mybilan}
+	L'unité de mesure de l'\kw{intensité} électrique est l' \kw{ampère} (symbole $A$). 
+	
+	Un \kw{ampèremètre} permet de mesurer l'intensité du courant, il se branche \kw{en série} dans le circuit.
+	
+	\begin{center}
+		\includegraphics[scale=0.6]{img/schema1}
+	\end{center}
+\end{mybilan}
+
+\begin{myexos}
+	\twoCol{
+	\begin{itemize}
+		\item \exo{3}{124}
+		\item \exo{5}{125}
+		\item \exo{6}{125}		
+	\end{itemize}}
+\end{myexos}
+
+
+
+
+\section{Dipôles en série et en dérivation}
+
+
+\begin{mybilan}
+	\begin{itemize}
+		\item Dans un \kw{circuit série}, la valeur de l'intensité du courant est la même en tout point du circuit, quel que soit l'ordre des dipôles : c'est la \kw{loi d'unicité de l'intensité}.
+			
+			
+			\twoCol{
+				\begin{center}
+					\includegraphics[scale=0.5]{img/schema2}
+				\end{center}
+				
+			\kw{\begin{center}
+				\begin{equation*}
+					I = I_1 = I_2
+				\end{equation*}
+			\end{center}}}
+		
+	
+		\item Dans un circuit comportant des \kw{dérivations}, l'intensité du courant dans la branche principale est égale à la \kw{somme des intensités} des courants dans les \kw{branches dérivées}.
+		
+		
+		
+		\twoCol{
+			\begin{center}
+				\includegraphics[scale=0.5]{img/schema3}
+			\end{center}
+			
+			\kw{\begin{center}
+					\begin{equation*}
+						I = I_1 + I_2
+					\end{equation*}
+		\end{center}}}
+	
+		\item Dans un circuit en dérivation, un \kw{n\oe ud} est le point de jonction d'au moins trois branches.
+	\end{itemize}
+\end{mybilan}
+
+
+\begin{myex}
+	\twoCol{
+		\begin{itemize}
+			\item \exo{7}{125}
+			\item \exo{9}{125}
+			\item \exo{12}{126}
+			\item \exo{13}{126}
+			\item \exo{14}{126}
+			\item \exo{16}{127}
+			\item \exo{17}{127}
+			\item \exo{20}{127}
+		\end{itemize}
+	}
+\end{myex}
+
+\appendix
+
+
+
+%\newpage
+%
+%\section*{Correction des exercices}
+
+
+\end{document}]
