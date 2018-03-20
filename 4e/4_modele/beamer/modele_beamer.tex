@@ -1,0 +1,113 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme{}
+
+\input{../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+\usepackage{../../../moncours_beamer}
+
+
+
+
+
+\graphicspath{{../img/}}
+%Quelles sont les deux sortes de sources de lumière
+\title{Un modèle pour comprendre} 
+\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Molécules et compressibilité}
+
+\begin{frame}
+ 
+
+\begin{mybilan}
+	\begin{itemize}
+		\item L'eau et l'air sont constitués de grains de matière, des \kw{molécules}.\pause
+		\item Un gaz est constitué de \kw{grains de matière} \kw{en mouvement, dispersés, séparés par du vide}.\pause
+		\item Un \kw{gaz est compressible} car on peut diminuer le volume qu'il occupe, c'est à dire rapprocher les grains de matière qui le constituent.\pause
+		\item L'eau est incompressible car on ne peut pas rapprocher les grains de matière qui la constituent.
+	\end{itemize}
+\end{mybilan}
+
+\end{frame}
+
+\begin{frame}
+\begin{center}
+	\includegraphics[scale=0.25]{../img/compression}
+\end{center}
+\end{frame}
+
+
+\section{Pression d'un gaz}
+
+\begin{frame}
+\begin{mybilan}
+	\begin{itemize}
+		\item La \kw{pression} d'un gaz correspond aux chocs des grains de matières entre eux ou contre les parois.\pause
+		\item Plus on compresse un gaz, plus les chocs sont nombreux et plus la pression augmente.\pause
+		\item \kw{L'unité légale de pression} est le \kw{pascal (Pa)}.\pause
+		\item Pour mesurer la pression d'un gaz on utilise un \kw{manomètre}.
+		
+	\end{itemize}
+\end{mybilan}
+\end{frame}
+\section{Masse volumique de l'air}
+
+
+\subsection{Masse de l'air}
+
+\begin{frame}
+\begin{mybilan}
+	Dans des conditions normales de température et de pression, 1l d'air à une masse d'air est de \num{1.2} g.
+\end{mybilan}
+\end{frame}
+
+\subsection{Masse volumique}
+
+\begin{frame}
+\begin{mybilan}
+	La \kw{masse volumique} d'un corps, notée \kw{$\rho$}, est le rapport entre la masse \kw{m} et son volume \kw{V}. Elle est spécifique à chaque matière pour une température et une pression donnée.
+	
+	\begin{equation*}
+	\mathbf{\rho} \: \mathit{{\small (kg/m^3)}} = \frac{\mathbf{m} \mathit{{\small (kg)}}}{\mathbf{V} \mathit{{\small (m^3)}}}
+	\end{equation*}
+\end{mybilan}\pause
+
+\begin{myex}
+	\begin{itemize}
+		\item $\rho_{air}  = \num{1.3} \: kg/m^3$ à 0°C et une pression de \num{1013} hPa.
+		\item $\rho_{air}  = \num{1.2} \: kg/m^3$ à 20°C et une pression de \num{1013} hPa.
+	\end{itemize}
+\end{myex}
+
+\end{frame}
+\end{document}
