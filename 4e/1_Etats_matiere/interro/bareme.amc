@@ -12,7 +12,7 @@ AUTOQCM[NUM=3=glacon]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=4=matiere]
+AUTOQCM[NUM=4=chgmt]
 
 AUTOQCM[FQ]
 
@@ -28,7 +28,7 @@ AUTOQCM[NUM=7=liquide]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=8=etats]
+AUTOQCM[NUM=8=solidification]
 
 AUTOQCM[FQ]
 
@@ -36,7 +36,7 @@ AUTOQCM[NUM=9=surface]
 
 AUTOQCM[FQ]
 
-AUTOQCM[NUM=10=volume]
+AUTOQCM[NUM=10=energie]
 
 AUTOQCM[FQ]
 
