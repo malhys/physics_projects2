@@ -1,0 +1,167 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8x]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage{multicol}
+\usepackage[output-decimal-marker={,}]{siunitx}
+
+\usepackage[francais,bloc,completemulti]{automultiplechoice}    
+\begin{document}
+
+\exemplaire{10}{    
+
+%%% debut de l'en-tête des copies :    
+
+\noindent{\bf Sciences Physiques  \hfill Cinquième}
+
+\vspace*{.5cm}
+\begin{minipage}{.4\linewidth}
+\centering\large\bf Test de rentrée\\ 18/09/2018\end{minipage}
+\champnom{\fbox{    
+                \begin{minipage}{.5\linewidth}
+                  Nom et prénom :
+
+                  \vspace*{.5cm}\dotfill
+                  \vspace*{1mm}
+                \end{minipage}
+         }}
+
+\begin{center}\em
+Durée : 15 minutes.
+
+%  Aucun document n'est autorisé.
+%  L'usage de la calculatrice est interdit.
+
+%  Les questions faisant apparaître le symbole \multiSymbole{} peuvent
+%  présenter zéro, une ou plusieurs bonnes réponses. Les autres ont
+%  une unique bonne réponse.
+%
+Une bonne réponse rapporte 2 points et une mauvaise en retire 0,5.
+\end{center}
+\vspace{1ex}
+
+%%% fin de l'en-tête
+\begin{multicols}{2}
+	
+\begin{question}{neige}    
+  La neige est de l'eau à l'état~:
+  \begin{reponses}
+    \bonne{Solide}\bareme{b=2}
+    \mauvaise{Liquide}\bareme{b=-0.5}
+    \mauvaise{Gazeux}\bareme{b=-0.5}
+  \end{reponses}
+\end{question}
+
+\begin{questionmult}{gaz}    
+  Un gaz~:
+  \begin{reponses}
+    \bonne{n'a pas de forme propre.}\bareme{b=1}
+    \bonne{est compressible.}\bareme{b=1}
+    \mauvaise{a un volume propre.}\bareme{b=-0.5}
+  \end{reponses}
+\end{questionmult}
+
+
+\begin{question}{glacon}
+	L'eau d'un glaçon exposé au Soleil un jour d'été est~:
+	\begin{reponses}
+		\bonne{d'abord solide puis liquide.}\bareme{b=2}
+		\mauvaise{d'abord liquide puis solide.}\bareme{b=-0.5}
+		\mauvaise{d'abord gazeuse puis solide.}\bareme{b=-0.5}
+	\end{reponses}
+\end{question}
+
+\begin{question}{matiere}    
+	la matière est constituée~:
+	\begin{reponses}		
+		\mauvaise{de grains de sable.}\bareme{b=-0.5}
+		\bonne{d'atomes.}\bareme{b=2}
+		\mauvaise{d'air.}\bareme{b=-0.5}
+		\mauvaise{de quatre éléments}\bareme{b=-0.5}
+	\end{reponses}
+\end{question}
+
+\begin{question}{CO2}    
+	du dioxyde de carbone pur est constitué~:
+	\begin{reponses}		
+		\mauvaise{d'un seul type d'atomes.}\bareme{b=-0.5}
+		\mauvaise{d'au moins trois types d'atomes.}\bareme{b=-0.5}
+		\bonne{d'un seul type de molécules.}\bareme{b=2}
+		\mauvaise{d'au moins trois types de molécules.}\bareme{b=-0.5}
+	\end{reponses}
+\end{question}
+
+\begin{question}{melange}    
+	Un mélange est constitué~:
+	\begin{reponses}		
+		\mauvaise{d'un seul type d'atomes}\bareme{b=-0.5}
+		\bonne{de plusieurs espèces chimiques.}\bareme{b=2}
+		\mauvaise{d'une seule espèce chimique.}\bareme{b=-0.5}
+		\mauvaise{de plusieurs types d'atomes.}\bareme{b=-0.5}
+		
+	\end{reponses}
+\end{question}
+
+\begin{question}{liquide}    
+	Au niveau microscopiques, dans un liquide, les molécules sont :
+	\begin{reponses}		
+		\mauvaise{proches les unes des autres et ordonnées}\bareme{b=-0.5}
+		\mauvaise{éloignées les unes des autres et peuvent se déplacer.}\bareme{b=-0.5}
+		\mauvaise{éloignées les unes des autres et ordonnées.}\bareme{b=-0.5}
+		\bonne{proches les unes des autres et peuvent se déplacer.}\bareme{b=2}
+		
+	\end{reponses}
+\end{question}
+
+
+
+\begin{question}{etats}
+	Quels sont les différents états physiques de la matière~?
+	\begin{reponses}
+		\mauvaise{Rouge, Vert et Bleu}\bareme{b=-0.5}
+		\bonne{Solide, Liquide et Gazeux}\bareme{b=2}
+		\mauvaise{Résistant, Souple et Dur}\bareme{b=-0.5}
+	\end{reponses}
+\end{question}
+
+\begin{question}{surface}
+	La surface libre d'un liquide est~:
+	\begin{reponses}
+		\mauvaise{parallèle au mur.}\bareme{b=-0.5}
+		\mauvaise{parallèle au sol.}\bareme{b=-0.5}
+		\bonne{plane et horizontale.}\bareme{b=2}
+		\mauvaise{perpendiculaire au sol.}\bareme{b=-0.5}
+	\end{reponses}   
+	  
+\end{question}
+
+
+\begin{question}{volume}
+	L'unité officielle de mesure du volume est le~:
+	\begin{reponses}
+		\mauvaise{centimètre cube.}\bareme{b=-0.5}
+		\mauvaise{mètre carré.}\bareme{b=-0.5}
+		\bonne{mètre cube.}\bareme{b=2}
+		\mauvaise{mètre.}\bareme{b=-0.5}
+	\end{reponses}   
+	
+\end{question}
+
+%\begin{question}{air}
+%	L'air qui nous entoure :
+%	\begin{reponses}
+%		\mauvaise{est composé d'un seul gaz}
+%		\bonne{est une mélange de plusieurs gaz}
+%		\mauvaise{ne contient pas de gaz} 
+%	\end{reponses}
+%\end{question}
+
+\end{multicols} 
+
+\clearpage    
+
+
+}  
+
+\end{document}
+\grid
