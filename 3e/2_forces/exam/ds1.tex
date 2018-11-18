@@ -1,6 +1,6 @@
 \documentclass[a4paper,11pt]{exam}
-\printanswers % pour imprimer les réponses (corrigé)
-%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
 %\qformat{\textbf{\thequestion ) } }
@@ -27,8 +27,8 @@
 
 %\usepackage{fullpage}
 \author{\ }
-\date{7 Octobre 2016}
-\title{DS num\'ero 1}
+\date{19 Novembre 2018}
+\title{DS num\'ero 2}
 
 
 \begin{document}
@@ -39,138 +39,44 @@
 	%\rhead{Share\LaTeX}
 
 	\maketitle
+
+\begin{small}
+	\begin{center}
+		\begin{tabular}{|@{\ }l@{}|@{\ }c@{\ }|}
+			\hline
+			\textbf{Compétence} & \textbf{Maitrise} \\
+			\hline
+			Identifier les interactions mises en jeu (de contact ou à distance) et les modéliser par des forces.\ &  \ \ \ \\
+			\hline	
+			 Action de contact et action à distance.\ &  \ \ \ \\
+			\hline	
+			 Force : point d’application, direction, sens et valeur.\ &  \ \ \ \\
+			\hline	
+		\end{tabular}
+	\end{center}
+\end{small}	
+
+\vspace*{0.5cm}
+Seul l'\ref{qcm} est à faire sur le sujet, les autres seront rédigés sur une feuille à part. Le soin et la qualité de la rédaction seront pris en compte.
 	
-\section{Questions à choix multiples}
-Pour chaque question, choisir la (ou les) bonne(s) réponse(s).
+\input{qcm}
 
-\begin{questions}
-	\question Dans la situation ci-dessous, l'action qui déforme le trampoline est :
-	
-	\begin{multicols}{2}
-	
-		\begin{center}
-			\includegraphics[scale=0.3]{trampo}	
-		\end{center}
-	
-	
-		\begin{checkboxes}
-			\choice celle exercée par l'enfant sur le trampoline.
-			\choice celle exercée par le trampoline sur l'enfant.
-			\choice le poids du trampoline.
-		\end{checkboxes}
-	\end{multicols}
-	\question Dans la situation ci-dessous, la force modélisée par la flèche est celle exercée :
-	
-	\begin{multicols}{2}
-		
-			
-		\begin{center}
-			\includegraphics[scale=0.3]{corde}
-		\end{center}
-		\begin{checkboxes}
-			\choice par la fille sur le garçon.
-			\choice par la corde sur le garçon.
-			\choice par la fille sur la corde.
-		\end{checkboxes}
-		
-	\end{multicols}
-
-	\question Dans la situation ci-dessous, le plongeur est soumis :
-	
-	\begin{multicols}{2}
-		
-		
-		\begin{center}
-			\includegraphics[scale=0.3]{plong}
-		\end{center}
-		\begin{checkboxes}
-			\choice à l'action exercée par le plongeoir.
-			\choice à l'action exercée par la Terre.
-			\choice à l'action exercée par l'air.
-		\end{checkboxes}
-	\end{multicols}
-
-\end{questions}
+\newpage 
+\input{doi}
 
 
-\section{Diagramme objet-interaction}
+\input{actions}
 
-Pour chaque diagramme objet-interaction, déterminer quelle est la situation décrite.
-
-\begin{multicols}{2}
-	\begin{questions}
-		\question	\includegraphics[scale=0.35]{doi1}
-		
-		\question \includegraphics[scale=0.35]{doi2}
-		
-	\end{questions}
-\end{multicols}
+\input{marteau}
 
 
-\section{Des actions qui se compensent}
-
-Un corps est soumis à des forces qui se compensent.
-
-\begin{questions}
-	\question Dans quels cas des forces se compensent-elles ?
-	\question Ce corps est au repos :
-	
-	\begin{parts}
-		\part Son état de repos va-t-il être modifié ?
-		\part Que faut-il pour que l'état soit modifié ?
-	\end{parts}
-	
-\end{questions}
-
-\section{Un coup de marteau}
-
-Giselle pose du plancher. Elle cherche à comprendre ce que subit le clou lorsqu'on vient le frapper avec le marteau.
-
-\begin{questions}
-	\question \'Etablir un diagramme objet-interaction pour l'objet <<clou>>.
-	\question Faire un schéma de la situation et représenter les forces qui s'exercent sur le clou.
-	\question Quel est l'effet de l'ensemble des actions qui s'exercent sur le clou.
-	
-\end{questions}
-
-\subsection*{Données}
-	\begin{itemize}
-		\item Force exercée par le marteau sur le clou : \num{50000} N;
-		\item Force exercée par la planche sur le clou : \num{5000} N;
-		\item \'Echelle : 1 cm $\leftrightarrow$ \num{10000} N.
-	\end{itemize}
-
-\section{Grues de chantier}
-
-Les grues permettent de déplacer de lourdes charges sur un chantier. On s'intéresse à la charge soulevée par la grue.
-
-\begin{questions}
-	\question Avec quels objets la charge est-elle en interaction ? Préciser à chaque fois le type d'interaction.
-	\question Ètablir le diagramme objet-interaction de la charge.
-	\question Représenter sur un schéma la force de \num{10000} N exercée par le câble de la grue sur la charge. Préciser l'échelle choisie.
-\end{questions}
 
 
 \newpage 
 
-\section{Caractéristiques d'une force}
+\input{grues}
 
-Dans chacun de ces 6 cas donner les caractéristiques de la force représentée (direction, sens et point d'application).
-
-\begin{center}
-%\begin{multicols}{2}
-	\includegraphics[scale=0.5]{forces_1}
-	
-	\vspace*{0.5cm}
-	
-	\includegraphics[scale=0.5]{forces_2}
-%\end{multicols}
-
-	\vspace*{0.5cm}
-	
-	\includegraphics[scale=0.5]{forces3}
-\end{center}
-
+\input{force}
 
 \label{LastPage}
 
