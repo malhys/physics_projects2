@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{exam}
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+%\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../monactivite}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\usepackage{fullpage}
+\author{\ }
+\date{9 Janvier 2019}
+\title{TP $3^e$: Révision : Mesures électriques}
+
+
+\begin{document}
+
+	\maketitle
+
+\section{Circuit série}\label{part:serie}
+
+On s'intéresse à la tension électrique et à l'intensité dans le circuit série présenté dans la figure suivante.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[scale=0.18]{img/serie}
+	\end{center}
+	\label{fig:serie}
+	\caption{Lampes branchées en série}
+\end{figure}
+
+
+\begin{questions}
+	
+	
+	\question Faire la liste du matériel nécessaire pour réaliser le montage.
+	
+	\fillwithdottedlines{3cm}
+	\question Après validation de la liste. Faire le montage en ajoutant un ampèremètre.
+	
+	\question Mesurer l'intensité du courant dans le circuit, entre la pile et l'interrupteur.
+		
+	\fillwithdottedlines{1cm}	
+	
+	\question Faire un schéma du nouveau circuit.
+	\makeemptybox{6.5cm}
+	
+	\question Mesurer l'intensité du courant à d'autres endroits du circuit.
+	\fillwithdottedlines{1cm}
+	
+	\question On veut maintenant connaître la tension aux bornes des lampes. Placer les voltmètres comme indiqué sur le schéma de la figure qui suit.
+	
+	\begin{figure}[h!]
+		\begin{center}
+			\includegraphics[scale=0.25]{img/tension_serie}
+		\end{center}		
+		
+		\label{fig:tension_serie}
+		\caption{Tension aux bornes des lampes en série}
+	\end{figure}
+	\question Quelle est la tension aux bornes de $L_1$ ? et de $L_2$ ?
+	\fillwithdottedlines{2cm}
+	
+	\question Quelle est la tension aux bornes de la pile ?
+	\fillwithdottedlines{2cm}
+
+\end{questions}
+
+\newpage
+\section{Dérivations}
+
+On s'intéresse maintenant au circuit de la figure ci dessous.
+
+\begin{figure}[h!]
+	\begin{center}
+	\includegraphics[scale=0.20]{img/drv}
+\end{center}
+	\label{fig:drv}
+	\caption{Lampes montées en dérivation}
+\end{figure}
+
+
+\begin{questions}
+	
+	
+	\question Placer des ampèremètres dans chacune des branches du circuit, comme indiqué ici.
+		
+	\begin{figure}[h!]
+		\label{fig:intensite_drv}
+		\begin{center}
+			\includegraphics[scale=0.2]{img/intensite_drv}
+		\end{center}
+	
+		
+		\caption{Mesure de l'intensité dans les branches du circuit}
+	\end{figure}
+	
+	\question Mesurer l'intensité du courant dans les deux branches.
+	
+	\fillwithdottedlines{2cm}
+	
+	\newpage
+	\question On veut maintenant connaître la tension aux bornes des lampes dans cette nouvelle disposition. Placer les voltmètres et faire le schéma du nouveau circuit.
+	\makeemptybox{7cm}
+	
+	\question Quelle est la tension aux bornes de $L_1$ ? et de $L_2$ ?
+	\fillwithdottedlines{2cm}
+	
+	\question Quelle est la tension aux bornes de la pile ?
+	\fillwithdottedlines{2cm}
+	
+\end{questions}
+
+\section{Conclusion}
+
+\begin{questions}
+	\question Comment se comportent l'intensité et la tension dans un circuit série ?
+	\fillwithdottedlines{3.5cm}	
+	
+	\question Comment se comportent l'intensité et la tension dans un circuit avec des dérivations.
+	\fillwithdottedlines{3.5cm}
+\end{questions}\label{LastPage}
+
+\end{document}

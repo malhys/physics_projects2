@@ -1,0 +1,153 @@
+\documentclass[a4paper,11pt]{exam}
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+%\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../monactivite}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\usepackage{fullpage}
+\author{\ }
+\date{8 Janvier 2019}
+\title{TP $5^e$: Mesures de masse et de volume}
+
+
+\begin{document}
+
+	\maketitle
+
+\section{Masse de liquides}\label{part:liquide}
+
+\begin{doc}
+	\caption{Protocole expérimental}
+	\label{doc:proto1}
+	\begin{multicols}{2}
+			
+		\begin{enumerate}[label=\arabic*)]
+			\item Mettre de l'eau dans un erlenmeyer;
+			\item Poser une éprouvette graduée sur la balance;
+			\item Faire la tare;
+			\item Verser 20 mL d'eau dans une éprouvette graduée;
+			%\item Reposer l'éprouvette sur la balance;
+			\item Lire la masse du volume d'eau;
+			\item Verser l'eau dans un bécher;
+			\item Reposer l'éprouvette vide sur la balance;
+			\item Faire la tare;
+			\item Prendre l'erlenmeyer d'éthanol;
+			\item Verser 20 mL d'éthanol dans l'éprouvette;
+			\item Lire la masse du volume d'éthanol;
+			\item Verser l'éthanol dans le bécher.
+		\end{enumerate}
+	\end{multicols}
+\end{doc}	
+
+
+\begin{questions}
+	
+	
+	\question Faire la liste du matériel nécessaire à l'expérience.
+	
+	\fillwithdottedlines{3cm}
+	
+	\question Faire l'expérience et noter les masses mesurées en précisant l'unité utilisée.
+	
+	\fillwithdottedlines{1cm}	
+	
+	\question Quelles observations peuvent être faites dans le bécher à la fin de l'expérience.\label{observations}
+	\fillwithdottedlines{1.5cm}
+	
+	\question Représenter sur un schéma la mesure de 20 mL d'éthanol.
+	
+	\makeemptybox{6cm}
+\end{questions}
+
+\section{Masse de solides}
+
+\begin{doc}[h!]
+	\caption{Protocole expérimental}
+	\label{doc:proto2}
+	
+	Pour chacun des solides fournis :
+
+		
+		\begin{enumerate}[label=\arabic*)]
+			\item Mesurer son volume;
+			\item Mesurer sa masse;
+		\end{enumerate}
+
+\end{doc}	
+
+
+\begin{questions}
+	\question Noter les volumes mesurés pour chaque solide en précisant l'unité utilisée.
+	\fillwithdottedlines{3cm}
+	
+	\question Noter les masses mesurées pour chaque solide en précisant l'unité utilisée.
+	\fillwithdottedlines{3cm}
+	
+	\question Représenter sur un schéma la mesure du volume d'un des solides.
+	\makeemptybox{8cm}
+\end{questions}
+
+\newpage
+
+\section{Pour aller plus loin}
+
+\subsection{Liquides}
+	\begin{questions}
+		\question Convertir 20 mL en $cm^3$ et en $m^3$.
+		
+		\fillwithdottedlines{1cm}
+		
+		\question Convertir les masses mesurées en $kg$
+		
+		\fillwithdottedlines{2cm}
+		
+		\question Diviser la masse de chaque liquide en $kg$ par son volume en $m^3$.
+		
+		\fillwithdottedlines{2cm}
+		
+		\question Faire le lien entre ces résultats et les observation faites à la question \ref{observations} de la \ref{part:liquide}.
+		
+		\fillwithdottedlines{3cm}
+		
+	\end{questions}
+
+\subsection{Solides}
+
+		\begin{questions}
+		\question Convertir au besoin les volumes mesurés en $cm^3$ et en $m^3$.
+		
+		\fillwithdottedlines{1cm}
+		
+		\question Convertir les masses mesurées en $kg$
+		
+		\fillwithdottedlines{2cm}
+		
+		\question Diviser la masse de chaque liquide en $kg$ par son volume en $m^3$.
+		
+		\fillwithdottedlines{2cm}
+		
+	\end{questions}
+\ \label{LastPage}
+
+\end{document}

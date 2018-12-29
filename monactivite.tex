@@ -1,0 +1,25 @@
+\usepackage{float}
+
+\makeatletter
+%
+\def\maketitle{{\centering%
+	\par{\LARGE\textbf{\@title}}%
+	\par{\@date}%
+	\par}}
+%
+\renewcommand{\thesection}{Partie \arabic{section} }
+%
+\renewcommand{\thesubsection}{\Alph{subsection}.}   
+%
+\makeatother
+
+
+\floatname{figure}{Fig.}
+
+\floatstyle{ruled}
+\newfloat{doc}{!ht}{lex}
+\floatname{doc}{Doc.}
+
+%\lhead{NOM Pr\'enom :}
+%\rhead{\textbf{Les r\'eponses doivent \^etre justifi\'ees et r\'edig\'ees}}
+\cfoot{\thepage / \pageref{LastPage}}
