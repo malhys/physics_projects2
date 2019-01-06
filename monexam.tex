@@ -1,3 +1,5 @@
+\usepackage{float}
+
 \makeatletter
 
 \def\maketitle{{\centering%
@@ -14,3 +16,7 @@
 \lhead{NOM Pr\'enom :}
 \rhead{\textbf{Les r\'eponses doivent \^etre justifi\'ees et r\'edig\'ees}}
 \cfoot{\thepage / \pageref{LastPage}}
+
+\floatstyle{boxed}
+\newfloat{doc}{!ht}{lex}
+\floatname{doc}{Doc.}

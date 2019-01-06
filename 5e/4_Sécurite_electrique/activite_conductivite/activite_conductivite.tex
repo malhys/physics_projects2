@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fullpage}
+
+\input{../../../utils_maths}
+\title{Démarche d'investigation : Remplacer des fils de connexion}
+\date{}
+
+\begin{document}
+
+
+	
+\maketitle
+
+\vspace*{-2cm}
+
+\section{Problème}	
+	Hugo dispose d'une pile et une lampe pour éclairer la maison de poupée de sa s\oe ur. Il doit relier la pile à la lampe par des fils de connexion. Pour ces fils de connexions il doit rechercher parmi les matériaux qu'il a sous la main, lesquels sont conducteurs et non isolants.
+	
+	
+\section{Hypothèse}
+	Il doit pouvoir remplacer le cuivre par un autre métal, qui sera lui aussi conducteur.
+	
+\section{Protocole expérimental}
+
+	\subsection{Protocole}
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\arabic*)]
+						
+				\item Relier une borne de la pile à la lampe ;
+				\item Relier l'autre borne de la pile à une pince crocodile;
+				\item Relier l'autre borne de la lampe à une autre pince crocodile;
+				\item Placer le matériau à tester entre les pinces crocodiles.
+			\end{enumerate}	
+		\end{multicols}
+		
+	
+	\subsection{Matériel}
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item Une pile;
+				\item Une lampe;
+				\item Des câbles électriques;
+				\item 2 pinces crocodiles;
+				\item Des matériaux à tester.
+			\end{itemize}
+		\end{multicols}
+
+	\subsection{Schéma}
+	
+		\begin{center}
+			\includegraphics[scale=0.8]{schema}
+		\end{center}
+	
+\section{Résultats}
+	\begin{tabular}{|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|@{\ }c@{\ }|}
+		\hline
+		\textbf{Matériau} & Clou en acier & Fil de fer & Cuiller en plastique & Paille  \\ \hline
+		\textbf{Ampoule}  & Allumée        & Allumée     & \'Eteinte              & \'Eteinte \\ \hline
+	\end{tabular}
+
+\section{Conclusion}
+
+	La lampe est allumée pour les matériaux métalliques utilisés, j'en déduis que ces matériaux sont conducteurs ; l'hypothèse est confirmée. Elle reste éteinte pour le plastique, c'est donc un isolant. 
+	
+	Il pourra donc utiliser du fil de fer pour relier la lampe à la pile.
+
+	
+\end{document}
