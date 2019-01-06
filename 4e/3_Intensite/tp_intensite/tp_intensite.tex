@@ -1,0 +1,99 @@
+\documentclass[a4paper,11pt]{exam}
+%\printanswers % pour imprimer les réponses (corrigé)
+\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+%\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../monactivite}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\usepackage{fullpage}
+\author{\ }
+\date{8 Janvier 2019}
+\title{TP $4^e$: Intensité d'un courant électrique}
+
+
+\begin{document}
+
+	\maketitle
+
+Dans ce TP, on s'intéresse à l'intensité du courant électrique dans plusieurs types de circuits.
+\section{Circuit série}\label{part:serie}
+
+On s'intéresse au comportement l'intensité dans un circuit série.
+
+
+\begin{questions}
+	
+	
+	\question Faire la liste du matériel nécessaire pour réaliser un circuit électrique contenant une pile, un interrupteur et deux ampoules.
+	
+	\fillwithdottedlines{3cm}
+	
+	\question Après validation de la liste ; faire le montage et schématiser le montage.
+	
+	\makeemptybox{7cm}
+	
+	\question Ajouter un ampèremètre entre la pile et l'interrupteur et mesurer l'intensité du courant à d'autres endroits du circuit.
+	\fillwithdottedlines{1cm}
+	
+	\question Rajouter un ampèremètre sur le schéma précédent.
+	
+	\question Déplacer l'ampèremètre à d'autres endroits du circuit et mesurer l'intensité.
+	
+	\fillwithdottedlines{3cm}
+	
+\end{questions}
+
+Dans cette partie, on étudie l'intensité dans un circuit avec plusieurs branches en dérivation
+
+\section{Dérivation}
+
+	\begin{questions}
+		\question Modifier le montage pour que les deux lampes ne soient plus en série mais en dérivation. Faire le schéma.
+		
+		\makeemptybox{6cm}
+		
+		
+		\question Rajouter des ampèremètres dans chaque branche du circuit comme indiqué ci-dessous.
+		
+		\begin{figure}[h!]
+			\begin{center}
+				\includegraphics[scale=0.25]{img/intensite_drv}
+			\end{center}
+		
+			\caption{Mesure de l'intensité dans des branches en dérivations}
+		\end{figure}
+	
+		\question Relever l'intensité du courant mesurée dans chaque branche.
+	\end{questions}
+
+\section{Conclusion}
+
+\begin{questions}
+	\question Que peut-on dire de l'intensité du courant dans des circuits électriques en série ou en dérivation.
+	
+	\fillwithdottedlines{4cm}
+\end{questions}
+
+\ \label{LastPage}
+
+\end{document}
