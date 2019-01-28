@@ -16,8 +16,8 @@
 
 \graphicspath{{../img/}}
 %Quelles sont les deux sortes de sources de lumière
-\title{L'intensité électrique}
-\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+\title{CH4 : La résistance électrique}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
 
 
 \AtBeginSection[]
@@ -44,8 +44,10 @@
   \titlepage 
 \end{frame}
 
-\section{Mesure d'une intensité électrique}
+\section{Intensité et tension}
 
+
+\subsection{Intensité électrique}
 
 
 %
@@ -68,68 +70,46 @@
 
 \begin{frame}
 
-\begin{alertblock}{}
-	
+\begin{mybilan}
 	\begin{itemize}
-		\item L'unité de mesure de l'\kw{intensité} électrique est l' \kw{ampère} (symbole $A$). 
+		\item Dans un \kw{circuit série}, la valeur de l'intensité du courant est la même en tout point du circuit, quel que soit l'ordre des dipôles : c'est la \kw{loi d'unicité de l'intensité}.\pause
 		
-		\item Un \kw{ampèremètre} permet de mesurer l'intensité du courant, il se branche \kw{en série} dans le circuit.
 		
-		\begin{center}
-			\includegraphics[scale=0.5]{../img/schema1}
-		\end{center}
+		\item Dans un circuit comportant des \kw{dérivations}, l'intensité du courant dans la branche principale est égale à la \kw{somme des intensités} des courants dans les \kw{branches dérivées}.		
+		
 	\end{itemize}
-	
-	
+\end{mybilan}
 
-\end{alertblock}
 \end{frame}
 
 
-\section{Dipôles en série et en dérivation}
-
+\subsection{Tension électrique}
 
 \begin{frame}
 
-	\begin{alertblock}{}
-		
+
+\begin{mybilan}
+	\begin{itemize}
+		\item Dans un \kw{circuit série} :\pause
 		\begin{itemize}
-			\item Dans un \kw{circuit série}, la valeur de l'intensité du courant est la même en tout point du circuit, quel que soit l'ordre des dipôles : c'est la \kw{loi d'unicité de l'intensité}.
+			\item la valeur de la tension entre les bornes d'un dipôle ne \kw{dépend pas de sa position} dans le circuit.\pause
+			\item la valeur de la \kw{tension $U$} aux bornes du générateur est égale à la \kw{somme des valeurs des tension $U_1$ et $U_2$} entre les bornes des dipôles : c'est la \kw{loi d'additivité des tensions}.\pause
 		\end{itemize}
 		
-			\begin{center}
-				\includegraphics[scale=0.35]{../img/schema2}
-			
-				\vspace*{-0.5cm}
-					\begin{equation*}
-					I = I_1 = I_2
-					\end{equation*}
-		\end{center}
-	\end{alertblock}
+		
+		\item Dans un circuit comportant des \kw{dérivations}, la valeur de la \kw{tension est la même} entre les bornes des dipôles branchés en \kw{dérivation}.
+		
+		
+	\end{itemize}
+\end{mybilan}
 \end{frame}
 
 
 \begin{frame}
-
-\begin{alertblock}{}
-	\begin{itemize}
-		\item Dans un circuit comportant des \kw{dérivations}, l'intensité du courant dans la branche principale est égale à la \kw{somme des intensités} des courants dans les \kw{branches dérivées}.
-		
-		\begin{center}
-			\includegraphics[scale=0.3]{../img/schema3}
-			
-			\vspace*{-0.5cm}
-			\begin{equation*}
-			I = I_1 + I_2
-			\end{equation*}
-		\end{center}
-	
-		\item Dans un circuit en dérivation, un \kw{n\oe ud} est le point de jonction d'au moins trois branches.
-	\end{itemize}
-	
-\end{alertblock}
+	\begin{center}
+		\includegraphics[scale=0.5]{lois_elec}
+	\end{center}
 \end{frame}
-
 
 %\section{Reconnaître le dioxyde de carbone}
 %
