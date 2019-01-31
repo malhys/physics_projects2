@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{exam}
-%\printanswers % pour imprimer les réponses (corrigé)
-\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
 \addpoints % Pour compter les points
 % \noaddpoints % pour ne pas compter les points
 %\qformat{\textbf{\thequestion ) } }
@@ -29,7 +29,7 @@
 \input{../../../utils_maths}
 
 
-%\usepackage{fullpage}
+\usepackage{fullpage}
 \author{\ }
 \date{18 Janvier 2019}
 \title{Brevet Blanc Sciences Physiques}
@@ -67,15 +67,42 @@ Pour cela Oscar PISTORIUS  utilise des prothèses CHEETAH (nom inspiré de l'ani
 \begin{questions}
 	\question Calculer la vitesse d'Oscar PISTORIUS lors des jeux paralympiques de 2004 en $m/s$ et en $km/h$.
 	
+	\begin{solution}
+		La vitesse $v$ est donnée par la relation $v=\dfrac{d}{t}$, avec $d\:=\:200\:m$ et $t\:=\:\num{21.97}\:s$, on a donc :
+		
+		\begin{equation*}
+			v = \dfrac{d}{t} = \dfrac{200}{\num{21.97}} = \num{9.10} m/s
+		\end{equation*}
+		
+		On convertit en km/h : $v=\num{9.10} \times \num{3.6} = 33$ $km/h$.\\
+		
+		Oscar PISTORIUS a donc couru à \num{9.10} m/s, soit 33 km/h.
+	\end{solution}
+	
 	\question Dans le document 3, il est dit que les fibres de carbone sont plus légères que l'aluminium. Démontrer cette information à l'aide des documents 3 et 4.
+	
+	\begin{solution}
+		Ces deux documents nous donnent les masses volumiques de l'aluminium $\rho_{Al} = \num{2.7} g/cm^3$ et des fibres de carbone $\rho_{fibres} = \num{1.8} g/cm^3$. En comparant ces deux grandeurs physiques, on constate qu'un $cm^3$ d'aluminium à un masse de $\num{2.7} g$ qui est bien plus élevés que le même volume de fibres de carbone réunies qui ne pèsent que $\num{1.8} g $. L'affirmation du texte est donc exacte, le même volume de fibres de carbone est plus léger que l'aluminium, un métal pourtant très léger.
+	\end{solution}
 	
 	\question 
 		\begin{parts}
 			\part Donner le nom des deux constituants d'un noyau atomique.
+			\begin{solution}
+				Le noyau atomique est constitué de protons et de neutrons.
+			\end{solution}
 			
 			\part Le fer $_{26}Fe$ contient 56 nucléons. Donner le nombre des constituants du noyau ainsi que le nombre des électrons de l'atome de fer. Justifier.
+			\begin{solution}
+				Pour le fer, $Z=26$, le noyau de fer contient donc 26 protons. Le nombre $N$ des neutrons est donné par $N=56-26=30$ neutrons.
+				
+				L'atome est électriquement neutre, il contient donc autant d'électrons (de charge négative) que de protons (de charge positive). Le nombre d'électrons est donc 26.
+			\end{solution}
 			
 			\part La rouille résulte de la réaction chimique entre le fer et et l'un des composants de l'air, lequel ?
+			\begin{solution}
+				L'air est constitué de dioxygène et de diazote. Le fer réagit avec le dioxygène lorsqu'il rouille. Cette transformation s'appelle l'oxydation du fer.
+			\end{solution}
 		\end{parts} 
 	
 	
@@ -83,7 +110,30 @@ Pour cela Oscar PISTORIUS  utilise des prothèses CHEETAH (nom inspiré de l'ani
 		\begin{parts}
 			\part Calculer la masse d'une prothèse en fibres de carbone.
 			
+			\begin{solution}
+				La masse volumique est donnée par la relation $\rho = \dfrac{m}{V}$ où $m$ est la masse et $V$ le volume.
+				
+				Nous pouvons écrire $\rho_{fibres} = \dfrac{m_{fibres}}{V}$, d'où :
+				
+				\begin{equation*}
+					m_{fibres} = \rho_{fibres} \times V = \num{1.8} \times 300 = 540g
+				\end{equation*}
+				
+				La masse de la prothèse est donc 540 g.
+			\end{solution}
+			
 			\part Calculer la masse de cette prothèse sil elle était en acier. Donner la réponse en $kg$, comparer les masses trouvées dans la question \textbf{4.} et conclure sur la raison de l'utilisation des fibres de carbone dans les prothèses Cheetah.
+			
+			\begin{solution}
+				On utilise la même formule $\rho_{acier} = \dfrac{m_{acier}}{V}$, d'où :
+				
+				\begin{equation*}
+				m_{acier} = \rho_{acier} \times V = \num{7.8} \times 300 = \num{2340} g = \num{2.34} kg
+				\end{equation*}
+				
+				
+				En comparant les valeurs de $m_{fibres}$ et $m_{acier}$, on constate en effet que la prothèse en fibres de carbone est bien plus légère que si on la fabriquait en acier. ces fibres offrent d'autres qualités, d'après le document 3, qui les rendent tout à fait comparables aux métaux du point de vue de la dureté mais pour une masse bien plus faible. Elles sont donc plus faciles à utiliser.
+			\end{solution}
 		\end{parts}	
 			
 \end{questions}
