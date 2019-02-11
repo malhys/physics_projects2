@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+%\usepackage{../../pas-math}
+\usepackage{../../moncours}
+
+
+
+\input{../../utils_maths}
+
+
+
+
+\date{}
+\title{}
+
+
+\begin{document}
+	
+	
+
+\chap[num=6, color=blue]{Circuits électriques}{\today }	
+
+
+
+\begin{mypb}
+	Comment représenter un circuit électrique ?
+\end{mypb}
+
+
+\section{Dipôles et circuits électriques}
+
+
+
+\input{bilan2}
+
+\begin{center}
+	\includegraphics[scale=0.35]{img/circuitsimple}
+\end{center}
+
+
+\section{Schéma normalisé}
+
+
+\input{bilan3}
+
+\begin{center}
+	\includegraphics[scale=0.5]{img/schema}
+\end{center}
+
+\begin{myexos}
+	\begin{itemize}
+		\item \exo{5}{79} Sens du courant dans un circuit
+		\item \exo{6}{79} Symboles normalisés des différents dipôles
+		\item \exo{7}{79} Nom des dipôles
+		\item \exo{9}{80} Comprendre circuit
+		\item \exo{11}{80} Comprendre circuit
+	\end{itemize}
+\end{myexos}
+
+\section{Circuits en série et en dérivation}
+
+
+\input{bilan4}
+
+
+\begin{multicols}{2}
+	\begin{center}
+		\includegraphics[scale=0.25]{img/serie}
+	\end{center}
+
+	\begin{center}
+		\includegraphics[scale=0.25]{img/drv}
+	\end{center}
+\end{multicols}
+
+
+\begin{myexos}
+	\begin{itemize}
+		\item \exo{8}{79} Série vs dérivation
+		\item \exo{10}{80} Branchement dérivation
+		\item \exo{11}{80} Dérivation et interrupteurs
+	\end{itemize}
+\end{myexos}
+
+
+\section{Court-circuit et sécurité}
+
+\begin{mybilan}
+	\begin{itemize}
+		\item Dans un montage, il y a \kw{court-circuit} quand les \kw{deux bornes de la source d'énergie sont directement reliées} par des fils de connexion.
+		\item Un court-circuit présente un \kw{danger d'incendie et de destruction de la source d'énergie}
+		
+		\item Pour protéger une installation et éviter les courts-circuits on utilise des coupe-circuit comme des fusibles ou des disjoncteurs. Ils ouvrent le circuit si le courant est trop intense.
+	\end{itemize}
+\end{mybilan}
+
+\begin{myexos}
+	\begin{itemize}
+		\item \exo{13}{80} Identifier les courts-circuits
+		\item \exo{14}{81} QCM multiprise et sécurité
+		\item \exo{15}{81} Multiprise et économies d'énergie
+		\item \exo{16}{81} Tableau électrique
+	\end{itemize}
+	
+	
+\end{myexos}
+
+
+
+\end{document}
