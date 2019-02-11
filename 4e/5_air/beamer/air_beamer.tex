@@ -1,0 +1,103 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme{}
+
+\input{../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+\usepackage{../../../moncours_beamer}
+
+
+
+
+
+\graphicspath{{../img/}}
+%Quelles sont les deux sortes de sources de lumière
+\title{L'air qui nous entoure}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{Sommaire}
+		\tableofcontents[currentsection, currentsubsection]
+	\end{frame} 
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Composition de l'air}
+
+
+
+%
+%\begin{frame}
+%	\begin{alertblock}
+%		\begin{itemize}
+%			\item L'unité de mesure de l'\kw{intensité} électrique est l' \kw{ampère} (symbole $A$). 
+%			
+%			\item Un \kw{ampèremètre} permet de mesurer l'intensité du courant, il se branche \kw{en série} dans le circuit.
+%		\end{itemize}
+%			
+%			
+%		\begin{center}
+%			\includegraphics[scale=0.6]{img/schema1}
+%		\end{center}
+%	\end{alertblock}
+%\end{frame}
+
+
+
+\begin{frame}
+
+\input{../bilan1}
+\end{frame}
+
+
+\section{Pression et masse d'un gaz}
+
+\subsection{Pression}
+
+\begin{frame}
+
+	\input{../bilan2}
+\end{frame}
+
+
+\subsection{Masse volumique}
+\begin{frame}
+
+	\input{../bilan3}
+\end{frame}
+
+
+%\section{Reconnaître le dioxyde de carbone}
+%
+%\begin{frame}
+%	\input{../activite4}
+%\end{frame}
+%
+%
+%\begin{frame}
+%	\input{../bilan4}
+%\end{frame}
+
+\end{document}
