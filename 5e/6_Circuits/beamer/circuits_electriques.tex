@@ -1,0 +1,128 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme{}
+
+\input{../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+\usepackage{../../../moncours_beamer}
+
+
+
+
+
+\graphicspath{{../img/}}
+%Quelles sont les deux sortes de sources de lumière
+\title[Ch 6 : Circuits électriques]{Chapitre 6 : Circuits électriques}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Problématique}
+	{\Large Comment représenter un circuit électrique ?}
+\end{block}
+\end{frame}
+
+
+\section{Dipôles et circuit électriques}
+
+\begin{frame}
+	\input{../bilan2}
+	
+	
+\end{frame}
+
+\begin{frame}
+\begin{center}
+	\includegraphics[scale=0.35]{../img/circuitsimple}
+\end{center}
+\end{frame}
+
+\section{Schéma normalisé}
+\begin{frame}
+	\input{../bilan3}
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{../img/schema}
+	\end{center}
+\end{frame}
+
+
+
+\section{Circuits en série et en dérivation}
+
+
+\begin{frame}
+	\input{../bilan4}
+\end{frame}
+
+\begin{frame}
+
+
+	
+			\begin{center}
+				\includegraphics[scale=0.2]{../img/serie}
+			\end{center}
+			\begin{center}
+				\includegraphics[scale=0.2]{../img/drv}      
+			\end{center}
+	
+
+\end{frame}
+
+\section{Court-circuits et sécurité}
+
+\begin{frame}
+	
+	\begin{mybilan}
+		\begin{itemize}
+			\item Dans un montage, il y a \kw{court-circuit} quand les \kw{deux bornes de la source d'énergie sont directement reliées} par des fils de connexion.\pause
+			
+			\item Un court-circuit présente un \kw{danger d'incendie et de destruction de la source d'énergie}.\pause
+			
+			\item Pour protéger une installation et éviter les courts-circuits on utilise des coupe-circuit comme des fusibles ou des disjoncteurs. Ils ouvrent le circuit si le courant est trop intense.
+		\end{itemize}
+	\end{mybilan}
+\end{frame}
+
+
+%\section{Reconnaître le dioxyde de carbone}
+%
+%\begin{frame}
+%	\input{../activite4}
+%\end{frame}
+%
+%
+%\begin{frame}
+%	\input{../bilan4}
+%\end{frame}
+
+\end{document}
