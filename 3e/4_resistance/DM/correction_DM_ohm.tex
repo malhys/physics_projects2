@@ -1,0 +1,101 @@
+\documentclass[a4paper,11pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+%\addpoints % Pour compter les points
+ \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+%\qformat{\textbf{\thequestion )} \textit{(\thepoints)} \\  } % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+
+
+
+\input{../../../monexam}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+\usepackage{tabu}
+
+%\usepackage{fullpage}
+\author{\ }
+\date{11 Mars 2019}
+\title{$3^{e}$ : Correction DM électricité}
+
+
+\begin{document}
+	
+\maketitle
+	
+\section{Lois de  l'électricité }
+
+\begin{questions}
+	\question 
+		\begin{parts}
+			\part Ce texte est un \textbf{extrait d'un article scientifique provenant du site cnrs.fr}. Il paraît fiable car le CNRS est le \textbf{Centre National de la Recherche Scientifique}. 
+			
+			\part D'après le document, les scientifiques ont réussi à faire circuler un courant électrique dans les molécules d'ADN et il possède une résistance électrique. Donc l'AN est bien un conducteur électrique.
+			
+			\part Le diamètre d'un atome est de l'ordre de \num{0.1} nanomètre. Pour une molécule d'ADN qui contient de nombreux atomes c'est de l'ordre du nanomètre.
+			
+			\part L'utilisation de molécules d'ADN comme conducteur va permettre de miniaturiser les circuits électroniques. 
+		\end{parts}
+	\question 
+		\begin{parts}
+			\part Pour tester si un matériau est conducteur, on peut insérer ce matériau dans un circuit simple qui contient une pile et une LED. Si la LED brille, alors le matériau est conducteur ; si elle ne brille pas, il est isolant. Il est possible d'ajouter un ampèremètre pour mesurer l'intensité du courant dans le circuit.
+			
+			\part Liste du matériel : pile, LED, ampèremètre, pince crocodile, fils de connexion.
+			
+			\begin{center}
+				\includegraphics[scale=1.4]{circuit}
+			\end{center}
+		\end{parts}
+\end{questions}
+
+\newpage
+
+\section{Protection d'une LED}
+
+\begin{questions}
+	\question Les dipôles du document 3 sont branchés en série.
+	
+	\question Le lien entre l'intensité et la tension électrique qui traverse une lampe est donné par la loi d'Ohm.
+	
+	\question L'intensité du courant qui traverse la LED et donc la résistance est $10 mA$, car dans un circuit série l'intensité est la même partout.
+	
+	\question D'après la loi d'Ohm, on a $U = R \times I$ où $U$ est la tension aux bornes de la résistance (en V), R est la valeur de la résistance (en $\Omega$) et $I$ est l'intensité du courant (en A).
+	
+	\question Dans un circuit série la tension fournie par la source d'énergie est répartie entre les différents dipôles. D'après le Document 2, la LED à une tension nominale de 2 V et le Document 3 indique que la pile fourni \num{4.5} V. On a donc :
+	
+	\begin{eqnarray*}
+		U_{Pile} &=& U_{Résistance} + U_{LED} \\
+		\num{4.5} &=& U_{Résistance} + 2 \\
+		U_{Résistance} &=& \num{4.5} - 2 \\
+		U_{Résistance} &=& \num{2.5}
+	\end{eqnarray*} 
+
+	La tension aux bornes de la résistance est de \num{2.5} V. 
+	
+	\question S'après la loi d'Ohm :
+	
+	
+	\begin{eqnarray*}
+		U &=& R \times I \\
+		\num{2.5} = R \times \num{0.01} \\
+		R =  \frac{\num{2.5}}{\num{0.01}} \\
+		R = 250
+	\end{eqnarray*}
+
+	Pour atteindre une intensité de \num{0.01} A dans ce circuit, il faut donc une résistance de 250 $\Omega$.  
+\end{questions}
+\label{LastPage}
+\end{document}
