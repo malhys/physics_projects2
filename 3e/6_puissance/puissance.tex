@@ -1,0 +1,96 @@
+\documentclass[12pt,a4paper]{article}
+
+%\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+\usepackage[in, plain]{fullpage}
+\usepackage{array}
+%\usepackage{../../pas-math}
+\usepackage{../../moncours}
+
+
+
+\input{../../utils_maths}
+
+\graphicspath{{./img/}}
+
+
+\date{}
+\title{}
+
+
+\begin{document}
+	
+	
+\chap[num=6, color=blue]{{Puissance d'un appareil électrique}}{\today }	
+
+
+
+
+\section{Puissance électrique}
+
+\begin{myact}{25 p 75}
+	Comprendre la fiche signalétique d'un appareil électrique
+\end{myact}
+
+\input{bilan1}
+
+
+\begin{myexos}
+	\begin{itemize}
+		\item \exo{5}{79} : associer unité et grandeur
+		\item \exo{7}{79} : fusible
+		\item \exo{10}{80} : conversions puissances
+		\item \exo{12}{80} : identifier coupe-circuit
+		\item \exo{10}{80} : choisir un fusible adapté
+	\end{itemize}
+	
+\end{myexos}
+
+
+
+\section{Puissance, tension et intensité}
+
+\input{bilan2}
+
+\begin{myexos}
+	\begin{itemize}
+		\item \exo{6}{79} : lien entre intensité, tension et puissance
+		\item \exo{8}{79} : mot croisé
+		\item \exo{9}{80} : lien entre intensité, tension et puissance
+		\item \exo{14}{81} : mulitiprise
+		\item \exo{15}{81} : compléter fiche signalétique
+		\item \exo{16}{81} : expliquer pourquoi le disjoncteur a ouvert le circuit
+	\end{itemize}
+	
+\end{myexos}
+
+
+\section{\'Energie électrique}
+
+\begin{mybilan}
+
+	L'\kw{énergie électrique} utilisée par un appareil de puissance $P$ qui fonctionne pendant une durée $t$ est donné par la relation :
+	\begin{equation*}
+		E = P \times t
+	\end{equation*}
+	Avec $E$ en kilowattheure (kWh), $P$ en kilowatt (kW) et $t$ en heures (h), ou  $E$ en joules (J), $P$ en watt (W) et $t$ en secondes (s).\\
+
+	Utiliser des appareil électriques moins puissants, diminuer leur durée de fonctionnement et éviter de les laisser en veille réduit la consommation d'énergie électrique.
+	
+	L'énergie électrique fournie par le secteur est \kw{convertie} en un autre type d'énergie suivant l'objet utilisé. \'Energie thermique pour un appareil de chauffage, énergie lumineuse pour une lampe, etc.
+	Toute l'énergie apportée à l'appareil est convertie, il y a \kw{conservation de l'énergie}. L'énergie apportée est égale à la somme des énergies fournies par l'appareil.
+ 
+\end{mybilan}
+
+\begin{myrem}
+	Le joule est une unité très petite, dans la pratique, on utilise le kilowattheure.
+
+	\begin{equation*}
+		1 kWh = 1 kW \times 1h = 1000 W \times 3600 s = \num{3.6} \times 10^{6} J
+	\end{equation*}
+\end{myrem}
+
+
+%\begin{center}
+%	\includegraphics[scale=0.3]{bilan}
+%\end{center}
+\end{document}
