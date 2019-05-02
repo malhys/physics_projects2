@@ -1,0 +1,91 @@
+\documentclass[a4paper,11pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+%\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+
+\makeatletter
+
+\def\maketitle{{\centering%
+		\par{\huge\textbf{\@title}}%
+		\par{\@date}%
+		\par}}
+
+%\input{../../../monexam}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+%\usepackage{fullpage}
+\author{\ }
+\date{}
+\title{Exercice corrigé : tension électrique}
+
+
+\begin{document}
+%	\usepackage{fancyhdr}
+%	
+%	\pagestyle{fancy}
+%	\fancyhf{}
+	%\rhead{Share\LaTeX}
+
+	\maketitle
+	
+\vspace*{1cm}
+
+Fatou a reçu en cadeau un manège miniature. Le jouet est alimenté par quatre piles de \num{1.5} $V$ qui fournissent une tension de 6 $V$. Un interrupteur permet d'allumer deux lampes qui éclairent les chevaux du manège et de commander en même temps le moteur qui fait tourner le manège.
+
+
+Fatou met en place les piles et les deux lampes fournies. Le moteur tourne normalement mais les lampes qui devaient éclairer la scène brillent très faiblement.
+
+Voici le schéma du circuit électrique du manège et les indications que Fatou trouve dans sa notice technique :
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Tension nominale des lampes : 6 $V$
+		\item Tension nominale du moteur : 6 $V$
+	\end{itemize}
+
+	\begin{center}
+		\includegraphics[scale=0.3]{1_schema}
+	\end{center}
+\end{multicols}
+
+\begin{questions}
+	\question Quelle est la valeur de la tension $U_m$ aux bornes du moteur ?
+	\begin{solution}
+		Lorsque l'interrupteur est fermé il s'agit d'un circuit en dérivation qui comporte deux branches. Dans ce cas, la tension est la même aux bornes des deux branches. Donc la tension aux bornes du moteur est la même que celle aux bornes du générateur, 6 $V$.
+	\end{solution}
+	
+	\question Quelle est la valeur de la tension aux bornes de l'ensemble des deux lampes ?
+	\begin{solution}
+		Les deux lampes constituent la seconde branche, donc la tension à leur bornes est donc également 6 $V$.
+	\end{solution}
+	
+	\question Calculer la tension aux bornes de chaque lampe (les lampes sont identiques).
+	\begin{solution}
+		Les deux lampes sont identiques et branchées en série l'une par rapport à l'autre. Les tensions aux bornes de dipôles branchés en série s'ajoutent. On a donc : $U_{L1} + U_{L2} = 6 V$ donc $U_{L1} = U_{L2} = 3 V$. La tension aux bornes de chaque lampe est 3 $V$.
+		
+	\end{solution}
+	
+	\question Expliquer pourquoi les deux lampes brillent faiblement.
+	\begin{solution}
+		La tension nominale des lampes est 6 $V$, donc chacune a besoin de 6 $V$ pour fonctionner correctement. Or elles ne reçoivent que 3 $V$, ce qui n'est pas suffisant pour qu'elles fonctionnent correctement.
+	\end{solution}
+\end{questions}
+%\ \label{LastPage}
+
+\end{document}
