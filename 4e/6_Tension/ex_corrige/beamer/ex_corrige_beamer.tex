@@ -1,0 +1,202 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme{}
+
+\input{../../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+\usepackage{../../../../moncours_beamer}
+
+
+
+
+
+\graphicspath{{../img/}}
+%Quelles sont les deux sortes de sources de lumière
+\title{Exercice corrigé : la tension électrique}
+%\author{O. FINOT}\institute{Collège S$^t$ Bernard}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{\'Enoncé}
+		
+	Fatou a reçu en cadeau un manège miniature. Le jouet est alimenté par quatre piles de \num{1.5} $V$ qui fournissent une tension de 6 $V$. Un interrupteur permet d'allumer deux lampes qui éclairent les chevaux du manège et de commander en même temps le moteur qui fait tourner le manège.
+	
+	
+	Fatou met en place les piles et les deux lampes fournies. Le moteur tourne normalement mais les lampes qui devaient éclairer la scène brillent très faiblement.\pause
+	
+	%Voici le schéma du circuit électrique du manège et les indications que Fatou trouve dans sa notice technique :
+	
+	\begin{columns}
+		\begin{column}{0.4\textwidth}
+			\includegraphics[scale=0.2]{../1_schema}
+			
+		\end{column}
+	
+		\begin{column}{0.6\textwidth}
+			\begin{itemize}
+				\item Tension nominale des lampes : 6 $V$
+				\item Tension nominale du moteur : 6 $V$
+			\end{itemize}		
+			
+		\end{column}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Question 1}
+	\begin{block}{}
+		Quelle est la valeur de la tension $U_m$ aux bornes du moteur ?
+	\end{block}
+
+			
+			\begin{columns}
+				\begin{column}{0.4\textwidth}
+					\includegraphics[scale=0.2]{../1_schema}
+					
+				\end{column}
+				
+				\begin{column}{0.6\textwidth}
+					\begin{itemize}
+						\item Tension nominale des lampes : 6 $V$
+						\item Tension nominale du moteur : 6 $V$
+					\end{itemize}		
+					
+				\end{column}
+			\end{columns}
+
+			\begin{block}<2->{Solution}
+				Lorsque l'interrupteur est fermé il s'agit d'un circuit en dérivation qui comporte deux branches. Dans ce cas, la tension est la même aux bornes des deux branches. Donc la tension aux bornes du moteur est la même que celle aux bornes du générateur, 6 $V$.
+			\end{block}
+			
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Question 2}
+\begin{block}{}
+	Quelle est la valeur de la tension aux bornes de l'ensemble des deux lampes ?
+\end{block}
+
+
+\begin{columns}
+	\begin{column}{0.4\textwidth}
+		\includegraphics[scale=0.2]{../2_schema}
+		
+	\end{column}
+	
+	\begin{column}{0.6\textwidth}
+		\begin{itemize}
+			\item Tension nominale des lampes : 6 $V$
+			\item Tension nominale du moteur : 6 $V$
+		\end{itemize}		
+		
+	\end{column}
+\end{columns}
+
+\begin{block}<2->{Solution}
+	Les deux lampes constituent la seconde branche, donc la tension à leur bornes est donc également 6 $V$.
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Question 3}
+\begin{block}{}
+	Calculer la tension aux bornes de chaque lampe (les lampes sont identiques).
+\end{block}
+
+
+\begin{columns}
+	\begin{column}{0.4\textwidth}
+		\includegraphics[scale=0.2]{../3_schema}
+		
+	\end{column}
+	
+	\begin{column}{0.6\textwidth}
+		\begin{itemize}
+			\item Tension nominale des lampes : 6 $V$
+			\item Tension nominale du moteur : 6 $V$
+		\end{itemize}		
+		
+	\end{column}
+\end{columns}
+
+\begin{block}<2->{Solution}
+	Les deux lampes sont identiques et branchées en série l'une par rapport à l'autre. Les tensions aux bornes de dipôles branchés en série s'ajoutent. On a donc : $U_{L1} + U_{L2} = 6 V$ donc $U_{L1} = U_{L2} = 3 V$. La tension aux bornes de chaque lampe est 3 $V$.
+\end{block}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Question 4}
+\begin{block}{}
+	Expliquer pourquoi les deux lampes brillent faiblement.
+\end{block}
+
+
+\begin{columns}
+	\begin{column}{0.4\textwidth}
+		\includegraphics[scale=0.2]{../4_schema}
+		
+	\end{column}
+	
+	\begin{column}{0.6\textwidth}
+		\begin{itemize}
+			\item Tension nominale des lampes : 6 $V$
+			\item Tension nominale du moteur : 6 $V$
+		\end{itemize}		
+		
+	\end{column}
+\end{columns}
+
+\begin{block}<2->{Solution}
+	La tension nominale des lampes est 6 $V$, donc chacune a besoin de 6 $V$ pour fonctionner correctement. Or elles ne reçoivent que 3 $V$, ce qui n'est pas suffisant pour qu'elles fonctionnent correctement.
+\end{block}
+
+
+\end{frame}
+%\section{Reconnaître le dioxyde de carbone}
+%
+%\begin{frame}
+%	\input{../activite4}
+%\end{frame}
+%
+%
+%\begin{frame}
+%	\input{../bilan4}
+%\end{frame}
+
+\end{document}
