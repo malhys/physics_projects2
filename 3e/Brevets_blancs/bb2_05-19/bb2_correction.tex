@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{exam}
+\printanswers % pour imprimer les réponses (corrigé)
+%\noprintanswers % Pour ne pas imprimer les réponses (énoncé)
+\addpoints % Pour compter les points
+% \noaddpoints % pour ne pas compter les points
+%\qformat{\textbf{\thequestion ) } }
+%\qformat{\textbf{\thequestion )}} % Pour définir le style des questions (facultatif)
+\usepackage{color} % définit une nouvelle couleur
+\shadedsolutions % définit le style des réponses
+% \framedsolutions % définit le style des réponses
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1} % bleu ciel
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent} % Définit le titre des solutions
+\usepackage{framed}
+\definecolor{shadecolor}{gray}{0.95}
+\definecolor{TFFrameColor}{rgb}{1,1,1}
+\definecolor{TFTitleColor}{rgb}{0.5,0.5,0.5}
+
+
+
+
+\input{../../../monbrevetblanc}
+
+
+%\usepackage{../../pas-math}
+%\usepackage{../../moncours}
+
+
+%\usepackage{pas-cours}
+\input{../../../utils_maths}
+
+
+\usepackage{fullpage}
+\author{\ }
+\date{7 Mai 2019}
+\title{Brevet Blanc Sciences Physiques (Correction)}
+
+
+\begin{document}
+%	\usepackage{fancyhdr}
+%	
+%	\pagestyle{fancy}
+%	\fancyhf{}
+	%\rhead{Share\LaTeX}
+
+\maketitle
+	
+
+\begin{questions}
+	\question[3] La LED contenue dans un détecteur de fumée optique produit sa propre lumière. C'est une source primaire de lumière.\\
+	
+	
+	\question[4] Dans une situation normale, la photodiode qui déclenche l'alarme ne reçoit pas la lumière de la LED en raison du cache. Contrairement à un gaz tel que la vapeur, la fumée est constituée de particules solides. Ces particules de fumées deviennent des objets diffusants en reflétant la lumière de la LED qui arrive alors jusqu'à la photodiode. \\
+	
+	
+	\question[6] Dans cette partie, on s'intéresse à la combustion incomplète du méthane qui est responsable de la production de monoxyde de carbone. La formule chimique du méthane est $CH_4$ (comme précisé dans l'énoncé) et celle du monoxyde de carbone est $CO$. L'équation qui modélise cette combustion incomplète est donc celle qui contient ces deux formules, c'est à dire la proposition 3 :
+	
+	\begin{center}
+		\ce{2CH4 + 3O2 -> 4H2O + 2CO}\\
+	\end{center}
+
+	\question[9] L'énoncé précise que le déclenchement de l'alarme est dû à une diminution importante de l'intensité électrique dans le circuit. Les documents présentent deux composants qui peuvent avoir cet effet la thermistance et la photorésistance. 
+	
+	D'après la loi d'ohm ($U = R \times I$), à tension constante lorsque la résistance augmente l'intensité du courant diminue. Le document 3 indique que, avec la thermistance, lorsque la température diminue la résistance augmente et donc l'intensité du courant diminue. D'après le document 4, cela se produit lorsque l'éclairement de la photorésistance diminue.
+	
+	Il est indiqué dans l'énoncé que "L'alarme se déclenche du fait de la diminution de l'éclairement", j'en déduis que le détecteur de monoxyde de carbone utilise une photorésistance. Parmi les montages expériementaux proposés un seul contient le symbole de la photorésistance présenté dans le document 2.
+	
+	Le montage expériemental qui correspond le mieux au fonctionnement d'un détecteur de monoxyde de carbone à disque est le montage n°3.
+
+
+			
+\end{questions}
+
+%\input{equations}
+%
+%\input{modeles}
+
+%\input{compo}
+
+%\newpage
+
+
+
+
+
+ 
+%\newpage
+%
+%\includegraphics [scale=0.5, angle= 90 ]{img/tableau} 
+\ \label{LastPage}
+
+\end{document}
