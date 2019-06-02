@@ -1,0 +1,95 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usetheme{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme{}
+
+\input{../../../utils_maths_beamer}
+
+
+%\usepackage{../../../../pas-math}
+\usepackage{../../../moncours_beamer}
+
+
+
+
+
+\graphicspath{{../img/}}
+%Quelles sont les deux sortes de sources de lumière
+\title{Chapitre 6 : Puissance d'un appareil électrique}
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame} 
+
+}
+
+
+%\AtBeginSubsection[]
+%{
+%	\begin{frame}
+%		\frametitle{Sommaire}
+%		\tableofcontents[currentsection, currentsubsection]
+%	\end{frame} 
+%}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage 
+\end{frame}
+
+\section{Puissance électrique}
+
+\begin{frame}
+\input{../bilan1}
+\end{frame}
+
+%\begin{frame}
+%%
+%%
+%	\
+%			\begin{center}
+%				\includegraphics[scale=0.45]{bilan_ions}
+%			\end{center}
+%		
+%%
+%\end{frame}
+
+\section{Puissance tension et intensité}
+
+
+
+\begin{frame}
+\input{../bilan2}
+\end{frame}
+\section{\'Energie électrique}
+
+
+\begin{frame}
+
+	\begin{mybilan}
+		\begin{itemize}
+		\item L'\kw{énergie électrique} utilisée par un appareil de puissance $P$ 	qui fonctionne pendant une durée $t$ est donné par la relation :
+		\begin{equation*}
+		E = P \times t
+		\end{equation*}
+		Avec $E$ en kilowattheure (kWh), $P$ en kilowatt (kW) et $t$ en heures (h), ou  $E$ en joules (J), $P$ en watt (W) et $t$ en secondes (s).\pause
+		
+		%Utiliser des appareil électriques moins puissants, diminuer leur durée de fonctionnement et éviter de les laisser en veille réduit la consommation d'énergie électrique.
+		
+		
+		\item L'énergie électrique fournie par le secteur est \kw{convertie} en un autre type d'énergie suivant l'objet utilisé. \'Energie thermique pour un appareil de chauffage, énergie lumineuse pour une lampe, etc.\pause
+		
+		\item Toute l'énergie apportée à l'appareil est convertie, il y a \kw{conservation de l'énergie}.
+	\end{itemize}
+	\end{mybilan}
+\end{frame}
+
+
+
+\end{document}
